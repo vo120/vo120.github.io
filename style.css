@@ -793,24 +793,49 @@ textarea:focus
 {
     font-size: 14px;
     font-weight: lighter;
-    text-align: left;
     list-style-type: none;
     line-height: 1.5em;
 }
-#skills li.two {
-    font-weight: lighter;
-    list-style-type: none;
-    align-items: center;
-    text-align: center;
-}
 
-li.three {
-    text-align: right;
-}
-.exp h2
+h2.exp
 {
     font-size: 19px;
     font-weight: 300;
-    justify-content: center;
     text-align: center;
 }
+
+h3.sub-exp
+{
+    font-size: 14px;
+    font-weight: 300;
+    text-align: left;
+}
+h4.timeline
+{
+    font-size: 14px;
+    font-weight: 300;
+    text-align: right;
+}
+
+#experience.row ul li
+{
+    list-style-type: square;
+    font-size: 14px;
+    font-weight: lighter;
+    margin-left: 30px;
+}
+.announcement h2{
+    font-size: 14px;
+    font-weight: 350;
+    text-align: center;
+}
+
+.announcement  a{
+    color:darkorange;
+}
+.announcement a:hover{
+    color: darkorange;
+    text-decoration: none;
+}
+
+
