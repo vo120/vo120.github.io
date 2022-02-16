@@ -830,8 +830,9 @@ h4.timeline
     text-align: center;
 }
 
-.announcement  a{
+.announcement a{
     color:darkorange;
+    font-weight: 350;
 }
 .announcement a:hover{
     color: darkorange;
