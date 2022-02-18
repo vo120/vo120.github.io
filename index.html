@@ -8,8 +8,15 @@
 
     <title>Vanessa Oru - Software Engineer, UX Designer & Researcher</title>
 
+    <!----adds favicon icon to browser to stop that error-->
+    <link rel="shortcut icon" href="#">
+
     <!----stylesheet reference--->
     <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!----part of greensock cdn at bottom but including up here to fix "uncaught error: Boostraps's JS require jQuery.
+    jQuery must be included before Bootstrap--->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 
     <!----google fonts----------->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
@@ -85,15 +92,21 @@
             <div class="whitespace"></div>
 
             <div class="row">
+                <div class="col-lg-5 project project1 wow fadeInUp" onclick="location.href='project.html'"></div>
+
+                <div class="col-lg-4"></div>
+            </div>
+
+            <div class="row">
                 <div class="col-lg-8"></div>
 
-                <div class="col-lg-4 project project1 wow fadeInUp" onclick="location.href='project.html'"></div>
+                <div class="col-lg-4 project project2 wow fadeInUp" onclick="location.href='project.html'"></div>
             </div>
 
             <div class="whitespace"></div>
 
             <div class="row">
-                <div class="col-lg-6 project project2 wow fadeInUp" onclick="location.href='project.html'"></div>
+                <div class="col-lg-6 project project3 wow fadeInUp" onclick="location.href='project.html'"></div>
 
                 <div class="col-lg-6"></div>
             </div>
@@ -103,7 +116,7 @@
             <div class="row">
                 <div class="col-lg-7"></div>
 
-                <div class="col-lg-4 project project3 wow fadeInUp" onclick="location.href='project.html'"></div>
+                <div class="col-lg-4 project project4 wow fadeInUp" onclick="location.href='project.html'"></div>
 
                 <div class="col-lg-1"></div>
             </div>
@@ -113,7 +126,7 @@
             <div class="row">
                 <div class="col-lg-1"></div>
 
-                <div class="col-lg-5 project project4 wow fadeInUp" onclick="location.href='project.html'"></div>
+                <div class="col-lg-5 project project5 wow fadeInUp" onclick="location.href='project.html'"></div>
 
                 <div class="col-lg-6"></div>
             </div>
@@ -158,14 +171,14 @@
 
                             <ul>
                                 <a href="https://github.com/vo120"><li id="gh" class="wow fadeInUp" data-wow-delay="0.6s">gh</li></a>
-                                <li id="fg" class="wow fadeInUp" data-wow-delay="0.8s">fg</li>
+                                <a href="https://www.figma.com/@vanessaoru"><li id="fg" class="wow fadeInUp" data-wow-delay="0.8s">fg</li></a>
                             </ul>
 
                             <br><br>
                         </div>
 
                         <div class="col-lg-4" id="address">
-                            <p class="wow fadeInUp" data-wow-delay="0s">say hello</p>
+                            <p class="wow fadeInUp" data-wow-delay="0s">get in touch</p>
                             <a href="mailto:redacted@example.com"><h4 class="wow fadeInUp" data-wow-delay="1.0s">email me</h4></a>
                             <br><br>
                         </div>

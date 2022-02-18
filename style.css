@@ -55,7 +55,7 @@ html, body
             width: 0;
         }
         to{
-            width: 25em;
+            width: 24em;
         }
     }
 }
@@ -163,7 +163,7 @@ nav #menu li a:hover{
     height:90px;
     position: absolute;
     left: 45%;
-    transform: translateX(-40%);
+    transform: translateX(-50%); /*-40 before*/
     text-align: center;
     display: table-cell;
     vertical-align: center;
@@ -181,7 +181,7 @@ nav #menu li a:hover{
 }
 
 #resize li:nth-child(1){
-    margin-top: 140px;
+    margin-top: 100px; /*140px before*/
 }
 
 #resize #menu li a{
@@ -241,9 +241,9 @@ nav #menu li a:hover{
     line-height: 58px;
 }
 
-@media(max-width: 768px){
+@media(max-width: 768px){ /*hero for index on phone*/
     .header h1{
-        font-size: 26px;
+        font-size: 20px; /*26px before*/
     }
 }
 /*----------------animation for scroll down icon-------*/
@@ -296,31 +296,50 @@ h6{
     width: 900px;
     position: relative;
 }
+
 .project1{
-    background: url('imgPF/TikTok Redesign.gif') no-repeat 60% 10%;
+    background: url('imgPF/portfolio.gif') no-repeat 60% 10%;
     background-size: contain;
 
 }
 
 .project1::after{
-    content:"redesigning tiktok.";
+    content:"building my portfolio.";
     font-family: "Roboto Mono";
     font-size: 34px;
     position: relative;
     color: #fff;
     display: block;
     top:20%;
-    left: -60%;
+    left: 90%;
     right: 0;
     bottom: 0;
 }
+.project2{
+    background: url('imgPF/TikTok Redesign.gif') no-repeat 60% 10%;
+    background-size: contain;
 
-.project2{ /*chess engine gif*/
+}
+
+.project2::after{
+    content:"redesigning tiktok.";
+    font-family: "Roboto Mono";
+    font-size: 34px;
+    position: relative;
+    color: #fff;
+    display: block;
+    top: 20%;
+    left: -60%;
+    right: 80px;
+    bottom: 0;
+}
+
+.project3{ /*chess engine gif*/
     background: url("imgPF/chessgametrimmed.gif") no-repeat 50% 55%;
     background-size: contain;
 }
 
-.project2::after{
+.project3::after{
     content:"building chess.";
     font-family: "Roboto Mono";
     font-size: 34px;
@@ -332,14 +351,14 @@ h6{
     right: 0;
     bottom: 0;
 }
-.project3{ /*notes app gif*/
+.project4{ /*notes app gif*/
     background: url("imgPF/NotesApp.gif") no-repeat 0% 30%;
     background-size: cover;
     width: 500px;
     height: 500px;
 }
 
-.project3::after{
+.project4::after{
     content:"taking notes.";
     font-family: "Roboto Mono";
     font-size: 34px;
@@ -351,14 +370,14 @@ h6{
     right: 0;
     bottom: 0;
 }
-.project4{ /*case converter gif*/
+.project5{ /*case converter gif*/
     background: url("imgPF/CaseConverter.gif") no-repeat 0% 60%;
     background-size: cover;
     height: 500px;
 
 }
 
-.project4::after{
+.project5::after{
     content:"converting cases";
     font-family: "Roboto Mono";
     font-size: 34px;
@@ -381,7 +400,7 @@ h6{
     .vertical{
         display: none;
     }
-    .project1::after, .project2::after, .project3::after, .project4::after{
+    .project1::after, .project2::after, .project3::after, .project4::after, .project5::after{
         display: none;
     }
 }
@@ -470,8 +489,11 @@ h6{
     }
 
     .info ul{
-        margin: 0 0 0 -22px;
+        margin:0 0 0 -22px; /*0 0 0 -22px before */
         padding-left: 20px;
+    }
+    .collab p{
+        margin: 80px 0 0 0;
     }
 }
 /*--------------------portfolio------------------------*/
@@ -603,6 +625,28 @@ textarea:focus
 }
 
 /*--------------------project page---------------------*/
+.hero-content1, .hero-content2{
+    margin-left: 0%;
+}
+
+.hero-content1 p, .hero-content2 p{
+    font-weight: 300;
+    line-height: 36px;
+    color: gray;
+}
+
+.hero-content1 h6, .hero-content2 h6{
+    text-align: left;
+}
+
+@media(max-width: 768px){
+    .hero-content1, .hero-content2{
+        padding-top: 50px;
+        width: 96%;
+        margin: 0 auto;
+    }
+}
+
 .prev, .next p{
     color: gray;
 }
@@ -610,24 +654,45 @@ textarea:focus
 .prev p
 {
     text-align: left;
+    margin: 0 0 0 0;
 }
 
 .next p
 {
     text-align: right;
+    margin: 0 0 0 0;
 }
 
 .col
 {
     display: block;
-    margin: 0 0 24px 0px;
+    margin: 0 0 20px 15%;
     padding: 12px;
     background: #1e1e1e;
     transition: all 200ms;
 }
-.rowImg
+.rowImg#chess .col
 {
-    height: 110vh;
+    display: block;
+    margin: 0 0 50% 50%;
+    padding: 15px;
+    background: #1e1e1e;
+    transition: all 200ms;
+}
+.rowImg#portfolio
+{
+    height: 50vh;
+}
+.rowImg#tiktok > .rowCol
+{
+    width: 30%;
+    float: left;
+    padding: 0px 5px;
+    height: 100%;
+}
+.rowImg#chess
+{
+    height: 2vh;
 }
 .col:hover
 {
@@ -640,6 +705,18 @@ textarea:focus
     display: block;
     width: 100%;
     margin: 0 0 20px 0;
+}
+.rowImg#portfolio > .rowCol > .col
+{/*so img is centered on computer*/
+    display: block;
+    width: 100%;
+    margin: 0 50% 2px 100%;/*before margin: 0 50% 20px 100%;*/
+}
+.rowImg#chess .col > img
+{
+    display: block;
+    width: 100%;
+    margin: 2px 2px 9px 0;
 }
 .col h2
 {
@@ -655,7 +732,7 @@ textarea:focus
     display: block;
     position: relative;
     width: 30.33%;
-    height: 80%;
+    height: 80%; /*80% before*/
     float: left;
     padding: 0 5px;
     box-sizing: content-box;
@@ -664,7 +741,7 @@ textarea:focus
 @media (max-width: 460px)
 {
     .rowCol{
-        width:60%;
+        width: 60%;
         height: 50%;
     }
 }
@@ -675,66 +752,28 @@ textarea:focus
         width: auto;
         float: none;
     }
+    .rowImg#portfolio > .rowCol > .col{ /*so img is centered on phone*/
+        margin: 0 2px 100%;
+    }
+    .rowImg#chess > .rowCol > .col{ /*so img is centered on phone*/
+        margin: 0 2px 20%;
+    }
 }
 
 @media screen and (max-width: 52em)
 {
-    .next{
+    /*.next{
         top: 98rem;
-    }
+    }*/
     .project-nav, .row ,.col-lg-6 {
-        bottom: -100rem;
+        bottom: -1rem; /*-90rem before*/
     }
 }
 
 @media screen and (max-width: 52em){ /*fix this later for project page*/
     #projectPage .collab, #linkedin, #media, #address {
-        bottom: -90rem;
+        bottom: 0; /*-90rem before*/
     }
-}
-.images5{ /*chess*/
-    background: url('imgPF/chessgame.png') no-repeat;
-    background-size: contain;
-}
-.images6{ /*chess*/
-    background: url('imgPF/chessgametrimmed.gif') no-repeat;
-    background-size: contain;
-}
-.images7{ /*notes*/
-    background: url('imgPF/EmptyNotes.png') no-repeat;
-    background-size: contain;
-}
-.images8{ /*notes*/
-    background: url('imgPF/NotesAppOpenPage.png') no-repeat;
-    background-size: contain;
-}
-.images9{ /*notes*/
-    background: url('imgPF/NoteInNotesApp.png') no-repeat -5% 50%;
-    background-size: contain;
-}
-.images10{ /*notes*/
-    background: url('imgPF/NotesApp.gif') no-repeat -5% 50%;
-    background-size: contain;
-}
-.images11{ /*Case converter*/
-    background: url('imgPF/ProperCase.png') no-repeat -5% 50%;
-    background-size: contain;
-}
-.images12{ /*case converter*/
-    background: url('imgPF/UpperCase.png') no-repeat -5% 50%;
-    background-size: contain;
-}
-.images13{ /*case converter*/
-    background: url('imgPF/lowercase.png') no-repeat -5% 50%;
-    background-size: contain;
-}
-.images14{ /*case converter*/
-    background: url('imgPF/Sentence Case.png') no-repeat -5% 50%;
-    background-size: contain;
-}
-.images15{ /*case converter*/
-    background: url('imgPF/CaseConverter.gif') no-repeat -5% 50%;
-    background-size: contain;
 }
 /*--------------------resume page----------------------*/
 .hero-content-1{
