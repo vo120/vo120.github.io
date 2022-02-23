@@ -77,7 +77,6 @@ nav
     position: fixed;
     z-index: 1;
 }
-
 nav #brand{
     float: left;
     display: block;
@@ -85,16 +84,13 @@ nav #brand{
     line-height:80px;
     font-weight: bold;
 }
-
 nav #brand a{
     color:#fff;
     transition: all 0.3s ease-out;
 }
-
 nav #brand a:hover{
     text-decoration: none;
 }
-
 nav #menu{
     float: left;
     right: 80px;
@@ -149,7 +145,7 @@ nav #menu li a:hover{
 
 #resize{
     z-index: 1;
-    top: 0px;
+    top: 0;
     position: fixed;
     background: #0f0f0f;
     width: 100%;
@@ -300,7 +296,8 @@ h6{
 .project1{
     background: url('imgPF/portfolio.gif') no-repeat 60% 10%;
     background-size: contain;
-
+    border: 1px outset #a2a0a0;
+    height: 310px;
 }
 
 .project1::after{
@@ -352,7 +349,7 @@ h6{
     bottom: 0;
 }
 .project4{ /*notes app gif*/
-    background: url("imgPF/NotesApp.gif") no-repeat 0% 30%;
+    background: url("imgPF/NotesApp.gif") no-repeat 0 30%;
     background-size: cover;
     width: 500px;
     height: 500px;
@@ -371,7 +368,7 @@ h6{
     bottom: 0;
 }
 .project5{ /*case converter gif*/
-    background: url("imgPF/CaseConverter.gif") no-repeat 0% 60%;
+    background: url("imgPF/CaseConverter.gif") no-repeat 0 60%;
     background-size: cover;
     height: 500px;
 
@@ -425,8 +422,8 @@ h6{
 }
 
 .info p{
-    color: gray;
-    font-weight: lighter;
+    color: #e1dcdc;
+    font-weight: normal;
 }
 
 .info li{
@@ -498,13 +495,13 @@ h6{
 }
 /*--------------------portfolio------------------------*/
 .hero-content{
-    margin-left: 0%;
+    margin-left: 0;
 }
 
 .hero-content p{
-    font-weight: 300;
+    font-weight: 350;
     line-height: 36px;
-    color: gray;
+    color: lightgrey;
 }
 
 .hero-content h6{
@@ -623,77 +620,53 @@ textarea:focus
     background: url("imgPF/18.jpg") no-repeat 50% 7%;
     background-size: cover;
 }
-
 /*--------------------project page---------------------*/
-.hero-content1, .hero-content2{
-    margin-left: 0%;
-}
-
-.hero-content1 p, .hero-content2 p{
-    font-weight: 300;
-    line-height: 36px;
-    color: gray;
-}
-
-.hero-content1 h6, .hero-content2 h6{
-    text-align: left;
-}
-
-@media(max-width: 768px){
-    .hero-content1, .hero-content2{
-        padding-top: 50px;
-        width: 96%;
-        margin: 0 auto;
-    }
-}
 
 .prev, .next p{
-    color: gray;
+    color: #e1dcdc;
+    cursor: pointer;
 }
-
 .prev p
 {
     text-align: left;
     margin: 0 0 0 0;
 }
-
 .next p
 {
     text-align: right;
     margin: 0 0 0 0;
 }
-
 .col
 {
     display: block;
-    margin: 0 0 20px 15%;
-    padding: 12px;
-    background: #1e1e1e;
-    transition: all 200ms;
-}
-.rowImg#chess .col
-{
-    display: block;
-    margin: 0 0 50% 50%;
+    margin: 0 10px;
     padding: 15px;
     background: #1e1e1e;
     transition: all 200ms;
 }
-.rowImg#portfolio
+/*.row#chess .col
 {
-    height: 50vh;
-}
-.rowImg#tiktok > .rowCol
+    display: block;
+    width: 80%;
+    margin-left: 0px;
+    height: auto;
+    transform: scale(0.8);
+}*/
+/*.row#portfolio > .col
 {
-    width: 30%;
-    float: left;
-    padding: 0px 5px;
+    height: 10vh;
+}*/
+
+.row#tiktok > .col
+{
+    width: 60%;
+    padding: 15px;
     height: 100%;
 }
-.rowImg#chess
+/*.rowImg#chess
 {
     height: 2vh;
-}
+}*/
 .col:hover
 {
     transform: translateY(-6px);
@@ -704,59 +677,61 @@ textarea:focus
 {
     display: block;
     width: 100%;
-    margin: 0 0 20px 0;
+    margin: 0 0 15px 0;
 }
-.rowImg#portfolio > .rowCol > .col
-{/*so img is centered on computer*/
+
+.row#portfolio > .col
+{
     display: block;
-    width: 100%;
-    margin: 0 50% 2px 100%;/*before margin: 0 50% 20px 100%;*/
+    width: 50px;
+    margin-left: 0;
+    height: auto;
+    transform: scale(0.8);
 }
-.rowImg#chess .col > img
+.row#notes .col
+{
+    padding: 10px 0 5px 0;
+    margin: 15px;
+    height: 100%;
+}
+.row#notes .col > img
+{
+    width: 400px;
+    margin: auto;
+}
+.row#caseconverter .col
+{
+    padding: 10px 0 5px 0;
+    margin: 14px;
+    height: 100%;
+}
+.row#caseconverter .col > img
+{
+    width: 450px;
+    margin: auto;
+}
+/*.row#chess .col > img
 {
     display: block;
     width: 100%;
     margin: 2px 2px 9px 0;
-}
+}*/
 .col h2
 {
     text-align: center;
     color: #fff;
-    font-size: 14px;
+    font-size: 16px; /*14px before*/
     text-transform: uppercase;
     margin-bottom: 0;
     padding-bottom: 0;
 }
-.rowCol
-{
-    display: block;
-    position: relative;
-    width: 30.33%;
-    height: 80%; /*80% before*/
-    float: left;
-    padding: 0 5px;
-    box-sizing: content-box;
-}
 
-@media (max-width: 460px)
-{
-    .rowCol{
-        width: 60%;
-        height: 50%;
-    }
-}
 
 @media (max-width: 900px)
 {
-    .rowCol{
+    .row{
         width: auto;
         float: none;
-    }
-    .rowImg#portfolio > .rowCol > .col{ /*so img is centered on phone*/
-        margin: 0 2px 100%;
-    }
-    .rowImg#chess > .rowCol > .col{ /*so img is centered on phone*/
-        margin: 0 2px 20%;
     }
 }
 
