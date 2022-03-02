@@ -643,29 +643,12 @@ textarea:focus
     padding: 15px;
     background: #1e1e1e;
     transition: all 200ms;
+    border-radius: 15px;
 }
-/*.row#chess .col
-{
-    display: block;
-    width: 80%;
-    margin-left: 0px;
-    height: auto;
-    transform: scale(0.8);
-}*/
-/*.row#portfolio > .col
-{
-    height: 10vh;
-}*/
-
-
-/*.rowImg#chess
-{
-    height: 2vh;
-}*/
 .col:hover
 {
     transform: translateY(-6px);
-    transition:all 200ms;
+    transition: all 200ms;
 }
 
 .col > img
@@ -748,23 +731,19 @@ textarea:focus
     width: 400px;
     margin: auto;
 }
-.row#caseconverter .col
+.row#caseconverter > .col
 {
     padding: 10px 0 5px 0;
     margin: 14px;
     height: 100%;
 }
+
 .row#caseconverter .col > img
 {
     width: 450px;
     margin: auto;
 }
-/*.row#chess .col > img
-{
-    display: block;
-    width: 100%;
-    margin: 2px 2px 9px 0;
-}*/
+
 .col h2
 {
     text-align: center;
