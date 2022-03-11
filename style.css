@@ -49,7 +49,7 @@ html, body
         width: 26em;
     }
 }
-@media(max-width: 768px) {
+@media(max-width: 1000px) { /*768px before*/
     @keyframes typewriter {
         from{
             width: 0;
@@ -298,6 +298,7 @@ h6{
     background-size: contain;
     border: 1px outset #a2a0a0;
     height: 310px;
+    cursor: pointer;
 }
 
 .project1::after{
@@ -307,7 +308,7 @@ h6{
     position: relative;
     color: #fff;
     display: block;
-    top:20%;
+    top:50%;
     left: 90%;
     right: 0;
     bottom: 0;
@@ -315,7 +316,7 @@ h6{
 .project2{
     background: url('imgPF/TikTok Redesign.gif') no-repeat 60% 10%;
     background-size: contain;
-
+    cursor: pointer;
 }
 
 .project2::after{
@@ -325,7 +326,7 @@ h6{
     position: relative;
     color: #fff;
     display: block;
-    top: 20%;
+    top: 30%;
     left: -60%;
     right: 80px;
     bottom: 0;
@@ -334,6 +335,7 @@ h6{
 .project3{ /*chess engine gif*/
     background: url("imgPF/chessgametrimmed.gif") no-repeat 50% 55%;
     background-size: contain;
+    cursor: pointer;
 }
 
 .project3::after{
@@ -353,6 +355,7 @@ h6{
     background-size: cover;
     width: 500px;
     height: 500px;
+    cursor: pointer;
 }
 
 .project4::after{
@@ -362,7 +365,7 @@ h6{
     position: relative;
     color: #fff;
     display: block;
-    top:80%;
+    top: 60%;
     left: -50%;
     right: 0;
     bottom: 0;
@@ -371,7 +374,7 @@ h6{
     background: url("imgPF/CaseConverter.gif") no-repeat 0 60%;
     background-size: cover;
     height: 500px;
-
+    cursor: pointer;
 }
 
 .project5::after{
@@ -388,7 +391,26 @@ h6{
     right: 0;
     bottom: 0;
 }
-
+.project6{ /*google chrome concept*/
+    background: url("imgPF/GoogleHomepage.jpg") no-repeat;
+    background-size: cover;
+    height: 400px;
+    cursor: pointer;
+}
+.project6::after{
+    content:"chrome concept.";
+    font-family: "Roboto Mono";
+    font-size: 34px;
+    position: relative;
+    background: -webkit-linear-gradient(left, whitesmoke, lightslategray);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: block;
+    top: 20%;
+    left: -60%;
+    right: 80px;
+    bottom: 0;
+}
 @media (max-width: 768px){
     .project{
         width: 90% !important;
@@ -397,7 +419,7 @@ h6{
     .vertical{
         display: none;
     }
-    .project1::after, .project2::after, .project3::after, .project4::after, .project5::after{
+    .project1::after, .project2::after, .project3::after, .project4::after, .project5::after,.project6::after{
         display: none;
     }
 }
@@ -657,7 +679,16 @@ textarea:focus
     width: 100%;
     margin: 0 0 15px 0;
 }
-.row#tiktok > .col
+.col h2
+{
+    text-align: center;
+    color: #fff;
+    font-size: 16px; /*14px before*/
+    text-transform: uppercase;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.row#tiktok > .col, .row#google > .col
 {
     width: 100%;/*before 60%*/
     padding: 15px;
@@ -674,9 +705,8 @@ textarea:focus
     gap: 10px;
     /*margin: 0 0 15px 0;*/
     margin: auto;
-
 }
-.row#tiktok > .col > img
+.row#tiktok> .col > img
 {
     width: 100%;
     margin: 0 0 15px 0;
@@ -731,38 +761,111 @@ textarea:focus
     width: 400px;
     margin: auto;
 }
-.row#caseconverter > .col
+/*.row#caseconverter > .col
 {
     padding: 10px 0 5px 0;
-    margin: 14px;
+    /*margin: 14px;
     height: 100%;
-}
+}*/
 
-.row#caseconverter .col > img
+/*.row#caseconverter .col > img
 {
     width: 450px;
     margin: auto;
+}*/
+.container > .row#caseconverter{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+            "topleft topright"
+            "middleleft middleright"
+            "bottom .";
+    width: 100%;
+    row-gap: 10px;
+    margin: auto;
+    align-items: center;
+}
+.row#caseconverter > .item1{
+    grid-area: topleft;
+    width: auto;
+}
+.row#caseconverter > .item2{
+    grid-area: topright;
+    width: auto;
+}
+.row#caseconverter > .item3{
+    grid-area: middleleft;
+    width: auto;
+}
+.row#caseconverter > .item4{
+    grid-area: middleright;
+    width: auto;
+}
+.row#caseconverter> .item5{
+    grid-area: bottom;
+    width: auto;
+    justify-self: center;
 }
 
-.col h2
+.container > .row#google
 {
-    text-align: center;
-    color: #fff;
-    font-size: 16px; /*14px before*/
-    text-transform: uppercase;
-    margin-bottom: 0;
-    padding-bottom: 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+            "topleft topright"
+            "middleleft middleright"
+            "bottomleft bottomright";
+    width: 100%;
+    row-gap: 10px;
+    margin: auto;
+    align-items: center;
+}
+.row#google > .item1{
+    grid-area: topleft;
+    width: auto;
+    height: 439px;
+}
+.row#google >.item1 > img,
+.row#google> .item2 > img{ /*to match pic dimensions next to it*/
+    height: 378px;
+}
+.row#google > .item6{
+    grid-area: topright;
+    width: auto;
+}
+.row#google > .item2{
+    grid-area: middleleft;
+    width: auto;
+}
+.row#google > .item5{
+    grid-area: middleright;
+    width: auto;
+}
+.row#google > .item3{
+    grid-area: bottomleft;
+    width: auto;
+}
+.row#google > .item4{
+    grid-area: bottomright;
+    width: auto;
 }
 
-
-@media (max-width: 900px)
+@media (max-width: 1000px) /*900px before*/
 {
     .row{
         width: auto;
         float: none;
     }
+    .row#google > .item1{
+        height: auto;
+    }
+    .row#google >.item1 > img,
+    .row#google> .item2 > img{ /*to match pic dimensions next to it*/
+        height: auto;
+    }
 }
-
 @media screen and (max-width: 52em)
 {
     /*.next{
