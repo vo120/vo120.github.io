@@ -521,7 +521,7 @@ h6{
 }
 
 .hero-content p{
-    font-weight: 350;
+    font-weight: 397; /*350 before*/
     line-height: 36px;
     color: lightgrey;
 }
