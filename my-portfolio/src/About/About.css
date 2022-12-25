@@ -1,0 +1,19 @@
+/*--------------------about page-----------------------*/
+.about {
+  height: 500px;
+  margin-top: 7%;
+  margin-left: -2%;
+  margin-right: 2%;
+}
+.image {
+  background: url("../imgPF/17.jpg") no-repeat 50% 4%;
+  background-size: cover;
+}
+.about1 {
+  height: 500px;
+  margin-top: 7%;
+}
+.image1 {
+  background: url("../imgPF/18.jpg") no-repeat 50% 7%;
+  background-size: cover;
+}

@@ -1,0 +1,94 @@
+/*--------------------resume page----------------------*/
+.hero-content-1 {
+  margin-left: 0%;
+  font-weight: 300;
+  line-height: 36px;
+}
+
+@media (max-width: 768px) {
+  .hero-content-1 {
+    padding-top: 50px;
+    width: 96%;
+    margin: 0 auto;
+  }
+}
+
+/*#education.container .row
+{
+    margin-left: auto;
+    margin-right: auto;
+}*/
+
+/*.edu
+{ /*still center's the edu div
+    margin: auto;
+}*/
+
+#education.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edu h2 {
+  font-size: 19px;
+  font-weight: 300;
+  text-align: center;
+}
+.edu ul li {
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+  list-style-type: none;
+  line-height: 1.9em;
+}
+.skill h2 {
+  font-size: 19px;
+  font-weight: 300;
+  text-align: center;
+}
+
+#skills.row ul li {
+  font-size: 14px;
+  font-weight: 300;
+  list-style-type: none;
+  line-height: 1.5em;
+}
+
+h2.exp {
+  font-size: 19px;
+  font-weight: 300;
+  text-align: center;
+}
+
+h3.sub-exp {
+  font-size: 14px;
+  font-weight: 300;
+  text-align: left;
+}
+h4.timeline {
+  font-size: 14px;
+  font-weight: 300;
+  text-align: right;
+}
+
+#experience.row ul li {
+  list-style-type: square;
+  font-size: 14px;
+  font-weight: 300;
+  margin-left: 30px;
+}
+.announcement h2 {
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.announcement a {
+  color: darkorange;
+  font-weight: 350;
+}
+.announcement a:hover {
+  color: darkorange;
+  text-decoration: none;
+}
