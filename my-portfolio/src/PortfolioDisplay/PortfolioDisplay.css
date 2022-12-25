@@ -1,0 +1,22 @@
+/*--------------------portfolio------------------------*/
+.hero-content {
+  margin-left: 0;
+}
+
+.hero-content p {
+  font-weight: 397; /*350 before*/
+  line-height: 36px;
+  color: lightgrey;
+}
+
+.hero-content h6 {
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding-top: 50px;
+    width: 96%;
+    margin: 0 auto;
+  }
+}
