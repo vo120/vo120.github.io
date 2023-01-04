@@ -1,7 +1,10 @@
 import React from "react";
 import "./Project1.css";
+import proj1Img from "../../imgPF/portfolio.gif";
 
-//todo: fix image showing up
+// todo: change onclicks to link tags and properly render them using react-router-dom
+//todo: change project 1 to actual project name here and everywhere else
+//todo: add no-underline to prev and next divs
 const Project1 = () => {
   return (
     <>
@@ -63,7 +66,7 @@ const Project1 = () => {
                 a couple of days after that. The result is shown below but can
                 be seen by navigating throughout this site.
               </p>
-              <p>
+              <p className="wow fadeInDownBig" data-wow-delay="2s">
                 Note: I will still be adding to the site as I am developing more
                 projects/websites.
               </p>
@@ -85,7 +88,7 @@ const Project1 = () => {
           <div className="row" id="portfolio">
             <div className="col">
               <img
-                src="../../imgPF/portfolio.gif"
+                src={proj1Img}
                 alt="picture of website portfolio"
                 className="wow fadeInLeft"
                 data-wow-delay={(onloadedmetadata = "2s")}
@@ -103,7 +106,7 @@ const Project1 = () => {
       <div className="project-nav" id="arrows">
         <div className="container">
           <div className="row">
-            <div
+            {/* <div
               className="col-lg-6 prev"
               onClick="window.location='project6.html'"
             >
@@ -111,9 +114,9 @@ const Project1 = () => {
                 <ion-icon name="arrow-back"></ion-icon>
                 previous
               </p>
-            </div>
+            </div> */}
 
-            <div
+            {/* <div
               className="col-lg-6 next"
               onClick="window.location='project2.html'"
             >
@@ -121,7 +124,7 @@ const Project1 = () => {
                 next
                 <ion-icon name="arrow-forward"></ion-icon>
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

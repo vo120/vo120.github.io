@@ -108,7 +108,9 @@ h6 {
   position: absolute;
   left: 50%;
 }
-
+a.no-underline {
+  text-decoration: none;
+}
 .project {
   height: 900px;
   width: 900px;

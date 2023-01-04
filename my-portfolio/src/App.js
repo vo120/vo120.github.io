@@ -7,18 +7,32 @@ import Contact from "./Contact/Contact.jsx";
 import Resume from "./Resume/Resume.jsx";
 import PortfolioDisplay from "./PortfolioDisplay/PortfolioDisplay.jsx";
 import Project1 from "./Projects/Project1/Project1.jsx";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+  Route,
+} from "react-router-dom";
 
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <>
+      <Route path="/" element={<Navbar />}>
+        <Route index element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/portfolio" element={<PortfolioDisplay />} />
+        <Route path="/resume" element={<Resume />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/projects/project1" element={<Project1 />} />
+      </Route>
+    </>
+  )
+);
 function App() {
   return (
     <>
       <div className="wrapper">
-        <Navbar />
-        {/* <Home /> */}
-        {/* <Contact /> */}
-        {/* <About /> */}
-        {/* <Resume /> */}
-        {/* <PortfolioDisplay /> */}
-        <Project1 />
+        <RouterProvider router={router} />
         <Footer />
       </div>
     </>
