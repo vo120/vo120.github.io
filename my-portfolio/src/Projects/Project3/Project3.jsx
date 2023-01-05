@@ -1,23 +1,22 @@
 import React from "react";
-import "./Project1.css";
-import proj1Img from "../../imgPF/portfolio.gif";
+import "./Project3.css";
+import chessGame from "../../imgPF/chessgame.png";
+import chessGameTrimmed from "../../imgPF/chessgametrimmed.gif";
 import { Link, Outlet } from "react-router-dom";
-
-//todo: change project 1 to actual project name here and everywhere else (same for rest of projects)
-const Project1 = () => {
+const Project3 = () => {
   return (
     <>
       <div className="whitespace"></div>
       {/* <!---------------where hero section starts-------------> */}
-      <div className="container">
-        <div className="hero-content" id="portfolio">
+      <div className="container projpage">
+        <div className="hero-content" id="chess">
           <br />
           <br />
           <div className="row">
             <div className="col-lg-12">
               <br />
               <h1 className="wow fadeInUp" data-wow-delay="1s">
-                Personal Portfolio
+                Chess
               </h1>
               <br />
               <br />
@@ -28,7 +27,7 @@ const Project1 = () => {
                     role :
                   </p>
                   <h6 className="wow fadeInUp" data-wow-delay="1.3s">
-                    User Experience Engineer
+                    Software Engineer
                   </h6>
                 </div>
 
@@ -37,7 +36,7 @@ const Project1 = () => {
                     started :
                   </p>
                   <h6 className="wow fadeInUp" data-wow-delay="1.5s">
-                    11 Feb 2022
+                    August 2021
                   </h6>
                 </div>
 
@@ -46,32 +45,25 @@ const Project1 = () => {
                     completed :
                   </p>
                   <h6 className="wow fadeInUp" data-wow-delay="1.7s">
-                    13 Feb 2022
+                    Dec 2021
                   </h6>
                 </div>
               </div>
               <br />
               <p className="wow fadeInUp" data-wow-delay="1.8s">
-                While sick with COVID, I decided to build my personal portfolio
-                2 days after revisiting my TikTok idea in Figma. I wanted to
-                showcase my other projects, yet put my front-end skills to the
-                test and build my portfolio from scratch. I had already learned
-                HTML, CSS, JavaScript a month prior, but I used several
-                frameworks and libraries like jQuery & Bootstrap that I had to
-                learn. I also needed to learn how to make it responsive. This
-                was an interesting challenge, but I fortunately completed the
-                task. In 1.5 days, I had mostly all the website completed and up
-                and running. However, I did add in a couple of finishing touches
-                a couple of days after that. The result is shown below but can
-                be seen by navigating throughout this site.
-              </p>
-              <p className="wow fadeInUp" data-wow-delay="2s">
-                Note: I will still be adding to the site as I am developing more
-                projects/websites.
-              </p>
-              <p className="wow fadeInUp" data-wow-delay="2.2s">
-                Update (Dec. 2022): I've recently updated the site to encompass
-                react & webpack.
+                I play a lot of chess. When I found out I had to complete my
+                first software engineering project for school, naturally I
+                thought "Why not build a chess engine from scratch?" I set out
+                on this journey to do so, only having ever used Python for
+                statistics solely. I decided to use the Python GUI to create
+                this. While learning data structures and algorithms, I had to
+                put what I was learning to the test as I developed the game. I
+                also had to teach myself how to use Python GUI and how that
+                translates to chess. While developing this game, I planned out
+                the project schedule that included gathering requirements,
+                design phase, making the MVC, and developing the algorithms.
+                Below is the result. You can also find the source code, MVC,
+                project plan, etc. on my GitHub profile.
               </p>
             </div>
           </div>
@@ -79,21 +71,30 @@ const Project1 = () => {
       </div>
       {/* <!---------------where hero section ends--------------->
 
-        <!---------------where project image starts------------> */}
+      <!---------------where project image starts------------> */}
       <div className="project-img">
         <div className="container">
           <br />
           <br />
-          <div className="row" id="portfolio">
+          <div className="row" id="chess">
             <div className="col">
               <img
-                src={proj1Img}
-                alt="picture of website portfolio"
+                src={chessGame}
+                alt="picture of chess game without opening move"
                 className="wow fadeInLeft"
                 data-wow-delay={(onloadedmetadata = "2s")}
               />
-              {/* <!--<div className="images images1 wow fadeInUp" data-wow-delay=onloadedmetadata="0.8s"></div>--> */}
-              <h2>Portfolio Front Page in Action</h2>
+              <h2>Chess Game</h2>
+            </div>
+
+            <div className="col">
+              <img
+                src={chessGameTrimmed}
+                alt="picture of chess game in action"
+                className="wow fadeInDown"
+                data-wow-delay={(onloadedmetadata = "2.2s")}
+              />
+              <h2>Chess Game in Action</h2>
             </div>
           </div>
         </div>
@@ -107,7 +108,7 @@ const Project1 = () => {
           <div className="row">
             <Link
               className="col-lg-6 no-underline prev"
-              to="/projects/project6"
+              to="/projects/project2"
             >
               <p id="prev">
                 <ion-icon name="arrow-back"></ion-icon>
@@ -117,7 +118,7 @@ const Project1 = () => {
 
             <Link
               className="col-lg-6 no-underline next"
-              to="/projects/project2"
+              to="/projects/project4"
             >
               <p id="next">
                 next
@@ -134,4 +135,4 @@ const Project1 = () => {
   );
 };
 
-export default Project1;
+export default Project3;

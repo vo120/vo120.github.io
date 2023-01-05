@@ -40,10 +40,10 @@ const Home = () => {
           <div className="row">
             <div className="col-lg-8"></div>
 
-            {/* <div
-              className="col-lg-4 project project6 wow fadeInUp"
-              onClick="location.href='project6.html'"
-            ></div> */}
+            <Link
+              className="col-lg-4 no-underline project project6 wow fadeInUp"
+              to="/projects/project6"
+            ></Link>
 
             {/* <!--<div className="col-lg-1"></div>--> */}
           </div>
@@ -51,10 +51,6 @@ const Home = () => {
           <div className="whitespace"></div>
 
           <div className="row">
-            {/* <div
-            className="col-lg-5 project project1 wow fadeInUp"
-            onClick="location.href='project1.html'"
-          ></div> */}
             <Link
               className="col-lg-5 no-underline project project1 wow fadeInUp"
               to="/projects/project1"
@@ -66,19 +62,19 @@ const Home = () => {
           <div className="row">
             <div className="col-lg-8"></div>
 
-            {/* <div
-              className="col-lg-4 project project2 wow fadeInUp"
-              onClick="location.href='project2.html'"
-            ></div> */}
+            <Link
+              className="col-lg-4 no-underline project project2 wow fadeInUp"
+              to="/projects/project2"
+            ></Link>
           </div>
 
           <div className="whitespace"></div>
 
           <div className="row">
-            {/* <div
-              className="col-lg-6 project project3 wow fadeInUp"
-              onClick="location.href='project3.html'"
-            ></div> */}
+            <Link
+              className="col-lg-6 no-underline project project3 wow fadeInUp"
+              to="/projects/project3"
+            ></Link>
 
             <div className="col-lg-6"></div>
           </div>
@@ -88,10 +84,10 @@ const Home = () => {
           <div className="row">
             <div className="col-lg-7"></div>
 
-            {/* <div
-              className="col-lg-4 project project4 wow fadeInUp"
-              onClick="location.href='project4.html'"
-            ></div> */}
+            <Link
+              className="col-lg-4 no-underline project project4 wow fadeInUp"
+              to="/projects/project4"
+            ></Link>
 
             <div className="col-lg-1"></div>
           </div>

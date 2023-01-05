@@ -62,7 +62,7 @@ const Navbar = () => {
 
       <div id="resize" className={resizeActive ? "active" : ""}>
         <div
-          className={resizeActive ? "on close-btn" : ""}
+          className={resizeActive ? "on close-btn" : "close-btn"}
           onClick={handleResizeClick}
         >
           close

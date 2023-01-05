@@ -6,6 +6,7 @@
   cursor: pointer;
 }
 .prev p {
+  color: #e1dcdc;
   text-align: left;
   margin: 0 0 0 0;
 }
@@ -13,6 +14,7 @@
   text-align: right;
   margin: 0 0 0 0;
 }
+
 .col {
   display: block;
   margin: 0 10px;
@@ -39,30 +41,6 @@
   margin-bottom: 0;
   padding-bottom: 0;
 }
-/* .row#tiktok > .col, .row#google > .col
-{
-    width: 100%;/*before 60%
-    padding: 15px;
-    height: min-content; /*before 100%
-    border-radius: 15px;
-    break-inside: avoid;
-}
-.container > .row#tiktok
-{
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto auto auto auto;
-    width: 100%;
-    gap: 10px;
-    /*margin: 0 0 15px 0;
-    margin: auto;
-}
-.row#tiktok> .col > img
-{
-    width: 100%;
-    margin: 0 0 15px 0;
-    object-fit: cover;
-} */
 .item1 {
   grid-column: 1 /2;
 }
@@ -94,151 +72,16 @@
   height: auto;
   transform: scale(0.8);
 }
-.project {
-  height: 900px;
-  width: 900px;
-  position: relative;
-}
-
-.project1 {
-  background: url("../../imgPF/portfolio.gif") no-repeat 60% 10%;
-  background-size: contain;
-  border: 1px outset #a2a0a0;
-  height: 310px;
-  cursor: pointer;
-}
-/* .row#notes .col
-{
-    padding: 10px 0 5px 0;
-    margin: 15px;
-    height: 100%;
-}
-.row#notes .col > img
-{
-    width: 400px;
-    margin: auto;
-} */
-/*.row#caseconverter > .col
-{
-    padding: 10px 0 5px 0;
-    /*margin: 14px;
-    height: 100%;
-}*/
-
-/*.row#caseconverter .col > img
-{
-    width: 450px;
-    margin: auto;
-}*/
-/* .container > .row#caseconverter{
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto;
-    grid-template-areas:
-            "topleft topright"
-            "middleleft middleright"
-            "bottom .";
-    width: 100%;
-    row-gap: 10px;
-    margin: auto;
-    align-items: center;
-}
-.row#caseconverter > .item1{
-    grid-area: topleft;
-    width: auto;
-}
-.row#caseconverter > .item2{
-    grid-area: topright;
-    width: auto;
-}
-.row#caseconverter > .item3{
-    grid-area: middleleft;
-    width: auto;
-}
-.row#caseconverter > .item4{
-    grid-area: middleright;
-    width: auto;
-}
-.row#caseconverter> .item5{
-    grid-area: bottom;
-    width: auto;
-    justify-self: center;
-}
-
-.container > .row#google
-{
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto;
-    grid-template-areas:
-            "topleft topright"
-            "middleleft middleright"
-            "bottomleft bottomright";
-    width: 100%;
-    row-gap: 10px;
-    margin: auto;
-    align-items: center;
-}
-.row#google > .item1{
-    grid-area: topleft;
-    width: auto;
-    height: 439px;
-}
-.row#google >.item1 > img,
-.row#google> .item2 > img{ /*to match pic dimensions next to it
-    height: 378px;
-}
-.row#google > .item6{
-    grid-area: topright;
-    width: auto;
-}
-.row#google > .item2{
-    grid-area: middleleft;
-    width: auto;
-}
-.row#google > .item5{
-    grid-area: middleright;
-    width: auto;
-}
-.row#google > .item3{
-    grid-area: bottomleft;
-    width: auto;
-}
-.row#google > .item4{
-    grid-area: bottomright;
-    width: auto;
-} */
-
 @media (max-width: 1000px) /*900px before*/ {
   .row {
     width: auto;
     float: none;
   }
-  /* .row#google > .item1{
-        height: auto;
-    }
-    .row#google >.item1 > img,
-    .row#google> .item2 > img{ /*to match pic dimensions next to it
-        height: auto;
-    } */
 }
 @media screen and (max-width: 52em) {
-  /*.next{
-        top: 98rem;
-    }*/
   .project-nav,
   .row,
   .col-lg-6 {
     bottom: -1rem; /*-90rem before*/
-  }
-}
-
-@media screen and (max-width: 52em) {
-  /*fix this later for project page*/
-  #projectPage .collab,
-  #linkedin,
-  #media,
-  #address {
-    bottom: 0; /*-90rem before*/
   }
 }

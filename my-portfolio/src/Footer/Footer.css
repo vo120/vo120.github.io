@@ -40,6 +40,16 @@
   font-weight: lighter;
   text-decoration: none;
 }
+.updated > .container {
+  color: #fff;
+  font-weight: 350;
+  font-size: 18px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
 
 #gh::before {
   /*github hyperlink*/
@@ -92,8 +102,12 @@
     margin: 80px 0 0 0;
   }
 }
-@media screen and (max-width: 52em){ /*fix this later for project page*/
-  #projectPage .collab, #linkedin, #media, #address {
-      bottom: 0; /*-90rem before*/
+@media screen and (max-width: 52em) {
+  /*fix this later for project page*/
+  #projectPage .collab,
+  #linkedin,
+  #media,
+  #address {
+    bottom: 0; /*-90rem before*/
   }
 }

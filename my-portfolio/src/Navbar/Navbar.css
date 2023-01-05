@@ -121,7 +121,7 @@ nav #menu li a:hover {
   opacity: 1;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px), (max-width: 1024px) {
   #toggle {
     visibility: visible;
     opacity: 1;
@@ -145,8 +145,21 @@ nav #menu li a:hover {
   }
 }
 
+/* After new toggle logic */
 @media (min-width: 800px) {
   #resize {
     visibility: hidden !important;
   }
 }
+
+/* old jquery toggle logic -> media query associated */
+/* @media (min-width: 768px) {
+  #resize {
+    visibility: hidden !important;
+  }
+}
+@media (min-width: 820px) {
+  #resize {
+    visibility: visible !important;
+  }
+} */
