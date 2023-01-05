@@ -20,3 +20,161 @@
     margin: 0 auto;
   }
 }
+/*--------------------projects section-----------------*/
+h6 {
+  text-align: center;
+}
+
+.vertical {
+  margin-top: 40px;
+  border-left: 1px solid #fff;
+  height: 80px;
+  position: absolute;
+  left: 50%;
+}
+
+.project {
+  height: 900px;
+  width: 900px;
+  position: relative;
+}
+
+.project1 {
+  background: url("../imgPF/portfolio.gif") no-repeat 60% 10%;
+  background-size: contain;
+  border: 1px outset #a2a0a0;
+  height: 310px;
+  cursor: pointer;
+}
+
+.project1::after {
+  content: "building my portfolio.";
+  font-family: "Roboto Mono";
+  font-size: 34px;
+  position: relative;
+  color: #fff;
+  display: block;
+  top: 50%;
+  left: 90%;
+  right: 0;
+  bottom: 0;
+}
+.project2 {
+  background: url("../imgPF/TikTok Redesign.gif") no-repeat 60% 10%;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.project2::after {
+  content: "redesigning tiktok.";
+  font-family: "Roboto Mono";
+  font-size: 34px;
+  position: relative;
+  color: #fff;
+  display: block;
+  top: 30%;
+  left: -60%;
+  right: 80px;
+  bottom: 0;
+}
+
+.project3 {
+  /*chess engine gif*/
+  background: url("../imgPF/chessgametrimmed.gif") no-repeat 50% 55%;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.project3::after {
+  content: "building chess.";
+  font-family: "Roboto Mono";
+  font-size: 34px;
+  position: relative;
+  color: #fff;
+  display: block;
+  top: 60%;
+  left: 90%;
+  right: 0;
+  bottom: 0;
+}
+.project4 {
+  /*notes app gif*/
+  background: url("../imgPF/NotesApp.gif") no-repeat 0 30%;
+  background-size: cover;
+  width: 500px;
+  height: 500px;
+  cursor: pointer;
+}
+
+.project4::after {
+  content: "taking notes.";
+  font-family: "Roboto Mono";
+  font-size: 34px;
+  position: relative;
+  color: #fff;
+  display: block;
+  top: 60%;
+  left: -50%;
+  right: 0;
+  bottom: 0;
+}
+.project5 {
+  /*case converter gif*/
+  background: url("../imgPF/CaseConverter.gif") no-repeat 0 60%;
+  background-size: cover;
+  height: 500px;
+  cursor: pointer;
+}
+
+.project5::after {
+  content: "converting cases";
+  font-family: "Roboto Mono";
+  font-size: 34px;
+  position: relative;
+  background: -webkit-linear-gradient(left, lightgrey, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+  top: 50%;
+  left: 90%;
+  right: 0;
+  bottom: 0;
+}
+.project6 {
+  /*google chrome concept*/
+  background: url("../imgPF/GoogleHomepage.jpg") no-repeat;
+  background-size: cover;
+  height: 400px;
+  cursor: pointer;
+}
+.project6::after {
+  content: "chrome concept.";
+  font-family: "Roboto Mono";
+  font-size: 34px;
+  position: relative;
+  background: -webkit-linear-gradient(left, whitesmoke, lightslategray);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+  top: 20%;
+  left: -60%;
+  right: 80px;
+  bottom: 0;
+}
+@media (max-width: 768px) {
+  .project {
+    width: 90% !important;
+    margin: 14px auto;
+  }
+  .vertical {
+    display: none;
+  }
+  .project1::after,
+  .project2::after,
+  .project3::after,
+  .project4::after,
+  .project5::after,
+  .project6::after {
+    display: none;
+  }
+}

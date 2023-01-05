@@ -79,7 +79,7 @@ const Footer = () => {
         <div className="updated">
           <div className="container">
             <p className="wow fadeInUp" data-wow-delay="0.8s">
-              last updated: {new Date().toString()}
+              last updated: {document.lastModified} EST
             </p>
           </div>
         </div>

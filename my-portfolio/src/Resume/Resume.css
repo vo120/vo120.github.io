@@ -11,6 +11,9 @@
     width: 96%;
     margin: 0 auto;
   }
+  main {
+    overflow-x: hidden;
+  }
 }
 
 /*#education.container .row
@@ -32,7 +35,7 @@
 
 .edu h2 {
   font-size: 19px;
-  font-weight: 300;
+  font-weight: 400;
   text-align: center;
 }
 .edu ul li {
@@ -44,7 +47,7 @@
 }
 .skill h2 {
   font-size: 19px;
-  font-weight: 300;
+  font-weight: 400;
   text-align: center;
 }
 
@@ -57,7 +60,7 @@
 
 h2.exp {
   font-size: 19px;
-  font-weight: 300;
+  font-weight: 400;
   text-align: center;
 }
 

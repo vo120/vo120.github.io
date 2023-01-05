@@ -1,79 +1,124 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
+import { NavLink, Outlet } from "react-router-dom";
 
-//todo: set up react router for proper navigation
 const Navbar = () => {
+  const [toggleOn, setToggleOn] = useState(false);
+  const [resizeActive, setResizeActive] = useState(false);
+
+  function handleToggleClick() {
+    setToggleOn(!toggleOn);
+    setResizeActive(!resizeActive);
+  }
+
+  function handleResizeClick() {
+    setResizeActive(!resizeActive);
+  }
+
+  console.log("in navbar");
   return (
     <>
       <nav>
         <span id="brand">
-          <a href="index.html">Vanessa Oru</a>
+          <NavLink to="/">Vanessa Oru</NavLink>
         </span>
 
         <ul id="menu">
           <li>
-            <a href="index.html">
+            <NavLink to="/">
               home<span>.</span>
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="portfolio.html">
+            <NavLink to="portfolio">
               portfolio<span>.</span>
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="resume.html">
+            <NavLink to="resume">
               resume<span>.</span>
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="about.html">
+            <NavLink to="about">
               about me<span>.</span>
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="contact.html">
+            <NavLink to="contact">
               contact me<span>.</span>
-            </a>
+            </NavLink>
           </li>
         </ul>
 
-        <div id="toggle">
+        <div
+          id="toggle"
+          className={toggleOn ? "on" : ""}
+          onClick={handleToggleClick}
+        >
           <div className="span">menu</div>
         </div>
       </nav>
 
-      <div id="resize">
-        <div className="close-btn">close</div>
+      <div id="resize" className={resizeActive ? "active" : ""}>
+        <div
+          className={resizeActive ? "on close-btn" : "close-btn"}
+          onClick={handleResizeClick}
+        >
+          close
+        </div>
 
         <ul id="menu">
           <li>
-            <a href="index.html">
+            <NavLink
+              to="/"
+              onClick={handleResizeClick}
+              className={resizeActive ? "on" : ""}
+            >
               home<span>.</span>
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="portfolio.html">
+            <NavLink
+              to="/portfolio"
+              onClick={handleResizeClick}
+              className={resizeActive ? "on" : ""}
+            >
               portfolio<span>.</span>
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="resume.html">
+            <NavLink
+              to="/resume"
+              onClick={handleResizeClick}
+              className={resizeActive ? "on" : ""}
+            >
               resume<span>.</span>
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="about.html">
+            <NavLink
+              to="/about"
+              onClick={handleResizeClick}
+              className={resizeActive ? "on" : ""}
+            >
               about me<span>.</span>
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="contact.html">
+            <NavLink
+              to="/contact"
+              onClick={handleResizeClick}
+              className={resizeActive ? "on" : ""}
+            >
               contact me<span>.</span>
-            </a>
+            </NavLink>
           </li>
         </ul>
       </div>
+      <main>
+        <Outlet />
+      </main>
     </>
   );
 };

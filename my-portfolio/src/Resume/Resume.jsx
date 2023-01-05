@@ -1,5 +1,6 @@
 import React from "react";
 import "./Resume.css";
+import { Link, Outlet } from "react-router-dom";
 
 const Resume = () => {
   return (
@@ -154,9 +155,10 @@ const Resume = () => {
           data-wow-delay="1.5s"
         >
           <h2>
-            for my full resume, please <a href="contact.html">contact me.</a>
+            for my full resume, please <Link to="/contact">contact me.</Link>
           </h2>
         </div>
+        <Outlet />
       </div>
     </>
   );
