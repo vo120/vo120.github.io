@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { NavLink, Outlet } from "react-router-dom";
+import { gsap, Expo } from "gsap";
+import { useEffect, useRef } from "react";
 
 const Navbar = () => {
   const [toggleOn, setToggleOn] = useState(false);
@@ -15,11 +17,34 @@ const Navbar = () => {
     setResizeActive(!resizeActive);
   }
 
-  console.log("in navbar");
+  const brandRef = useRef();
+  const tl = gsap.timeline();
+
+  useEffect(() => {
+    tl.from(brandRef.current, {
+      duration: 1,
+      // delay: 0.4,
+      y: 10,
+      opacity: 0, // Set the initial opacity to 0
+      ease: Expo.easeInOut,
+    }).to(brandRef.current, {
+      opacity: 1, // Animate the opacity to 1
+    });
+    tl.from("#menu li a", {
+      stagger: 0.1,
+      duration: 1,
+      // delay: 0.4,
+      opacity: 0, // Set the initial opacity to 0
+      ease: Expo.easeInOut,
+    }).to("#menu li a", {
+      opacity: 1, // Animate the opacity to 1
+    });
+  }, []);
+
   return (
     <>
       <nav>
-        <span id="brand">
+        <span id="brand" ref={brandRef}>
           <NavLink to="/">Vanessa Oru</NavLink>
         </span>
 

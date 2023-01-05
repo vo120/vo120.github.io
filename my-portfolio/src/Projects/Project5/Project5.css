@@ -1,4 +1,5 @@
 /*--------------------project page---------------------*/
+
 .prev,
 .next {
   color: #e1dcdc;
@@ -21,7 +22,6 @@ a.col-lg-6.next,
 .next p {
   text-align: right; /* Align the text to the right */
 }
-
 .col {
   display: block;
   margin: 0 10px;
@@ -72,13 +72,53 @@ a.col-lg-6.next,
   grid-column: auto;
   grid-row: 2;
 }
-.row#portfolio > .col {
-  display: block;
-  width: 50px;
-  margin-left: 0;
-  height: auto;
-  transform: scale(0.8);
+/*.row#caseconverter > .col
+{
+    padding: 10px 0 5px 0;
+    /*margin: 14px;
+    height: 100%;
+}*/
+
+/*.row#caseconverter .col > img
+{
+    width: 450px;
+    margin: auto;
+}*/
+.container > .row#caseconverter {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "topleft topright"
+    "middleleft middleright"
+    "bottom .";
+  width: 100%;
+  row-gap: 10px;
+  margin: auto;
+  align-items: center;
 }
+.row#caseconverter > .item1 {
+  grid-area: topleft;
+  width: auto;
+}
+.row#caseconverter > .item2 {
+  grid-area: topright;
+  width: auto;
+}
+.row#caseconverter > .item3 {
+  grid-area: middleleft;
+  width: auto;
+}
+.row#caseconverter > .item4 {
+  grid-area: middleright;
+  width: auto;
+}
+.row#caseconverter > .item5 {
+  grid-area: bottom;
+  width: auto;
+  justify-self: center;
+}
+
 @media (max-width: 1000px) /*900px before*/ {
   .row {
     width: auto;
