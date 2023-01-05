@@ -18,6 +18,9 @@ import {
   RouterProvider,
   Route,
 } from "react-router-dom";
+import WOW from "wowjs";
+import { useEffect } from "react";
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
@@ -38,6 +41,9 @@ const router = createBrowserRouter(
   )
 );
 function App() {
+  useEffect(() => {
+    new WOW.WOW({ live: false }).init();
+  }, []);
   return (
     <>
       <div className="wrapper">
@@ -49,22 +55,3 @@ function App() {
 }
 
 export default App;
-{
-  /*
-  <div className="App">
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>
-        Edit <code>src/App.js</code> and save to reload.
-      </p>
-      <a
-        className="App-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Learn React
-      </a>
-    </header>
-</div>*/
-}

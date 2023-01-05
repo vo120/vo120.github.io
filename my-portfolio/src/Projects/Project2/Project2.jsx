@@ -95,6 +95,7 @@ const Project2 = () => {
       {/* { <!---------------where hero section ends--------------->
 
       <!---------------where project image starts------------>} */}
+      {/* //todo: fix responsiveness */}
       <div className="project-img">
         <div className="container">
           <br />
