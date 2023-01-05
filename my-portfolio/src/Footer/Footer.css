@@ -1,0 +1,99 @@
+.collab {
+  text-align: right;
+}
+
+.collab p {
+  font-weight: lighter !important;
+  margin-bottom: 20px;
+}
+
+.hr {
+  background: rgba(255, 255, 255, 0.2);
+  height: 1px;
+}
+
+.info h4 {
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+.info p {
+  color: #e1dcdc;
+  font-weight: normal;
+}
+
+.info li {
+  font-weight: lighter;
+  color: #fff;
+  font-size: 18px;
+  padding-left: 20px;
+}
+
+.info a {
+  color: #fff;
+  font-weight: lighter;
+}
+
+.info a:hover {
+  /*linkedin hyperlink*/
+  color: #fff;
+  font-weight: lighter;
+  text-decoration: none;
+}
+
+#gh::before {
+  /*github hyperlink*/
+  display: inline-block;
+  content: "";
+  border-radius: 100%;
+  height: 4px;
+  width: 4px;
+  margin-right: 6px;
+  background: #3b5998;
+}
+
+#fg::before {
+  /*figma hyperlink*/
+  display: inline-block;
+  content: "";
+  border-radius: 100%;
+  height: 4px;
+  width: 4px;
+  margin-right: 6px;
+  background: pink;
+}
+
+#media,
+#address {
+  text-align: right;
+}
+
+#media ul {
+  list-style: none;
+}
+
+#media ul li {
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .collab,
+  #linkedin,
+  #media,
+  #address {
+    text-align: center;
+  }
+
+  .info ul {
+    margin: 0 0 0 -22px; /*0 0 0 -22px before */
+    padding-left: 20px;
+  }
+  .collab p {
+    margin: 80px 0 0 0;
+  }
+}
+@media screen and (max-width: 52em){ /*fix this later for project page*/
+  #projectPage .collab, #linkedin, #media, #address {
+      bottom: 0; /*-90rem before*/
+  }
+}
