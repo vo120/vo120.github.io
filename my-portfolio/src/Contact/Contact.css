@@ -65,6 +65,9 @@ textarea:focus {
   color: #101010;
 }
 
+.container-fluid#contact {
+  padding-left: 47px;
+}
 @media (max-width: 768px) {
   #contact-form {
     margin: 5% -8%;

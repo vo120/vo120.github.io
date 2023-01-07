@@ -39,7 +39,7 @@ h6 {
   position: relative;
 }
 
-.project1 {
+.personal-portfolio {
   background: url("../imgPF/portfolio.gif") no-repeat 60% 10%;
   background-size: contain;
   border: 1px outset #a2a0a0;
@@ -47,7 +47,7 @@ h6 {
   cursor: pointer;
 }
 
-.project1::after {
+.personal-portfolio::after {
   content: "building my portfolio.";
   font-family: "Roboto Mono";
   font-size: 34px;
@@ -59,13 +59,13 @@ h6 {
   right: 0;
   bottom: 0;
 }
-.project2 {
+.tiktok-redesign {
   background: url("../imgPF/TikTok Redesign.gif") no-repeat 60% 10%;
   background-size: contain;
   cursor: pointer;
 }
 
-.project2::after {
+.tiktok-redesign::after {
   content: "redesigning tiktok.";
   font-family: "Roboto Mono";
   font-size: 34px;
@@ -78,14 +78,14 @@ h6 {
   bottom: 0;
 }
 
-.project3 {
+.chess-app {
   /*chess engine gif*/
   background: url("../imgPF/chessgametrimmed.gif") no-repeat 50% 55%;
   background-size: contain;
   cursor: pointer;
 }
 
-.project3::after {
+.chess-app::after {
   content: "building chess.";
   font-family: "Roboto Mono";
   font-size: 34px;
@@ -97,7 +97,7 @@ h6 {
   right: 0;
   bottom: 0;
 }
-.project4 {
+.notes-app {
   /*notes app gif*/
   background: url("../imgPF/NotesApp.gif") no-repeat 0 30%;
   background-size: cover;
@@ -106,7 +106,7 @@ h6 {
   cursor: pointer;
 }
 
-.project4::after {
+.notes-app::after {
   content: "taking notes.";
   font-family: "Roboto Mono";
   font-size: 34px;
@@ -118,7 +118,7 @@ h6 {
   right: 0;
   bottom: 0;
 }
-.project5 {
+.case-converter {
   /*case converter gif*/
   background: url("../imgPF/CaseConverter.gif") no-repeat 0 60%;
   background-size: cover;
@@ -126,7 +126,7 @@ h6 {
   cursor: pointer;
 }
 
-.project5::after {
+.case-converter::after {
   content: "converting cases";
   font-family: "Roboto Mono";
   font-size: 34px;
@@ -140,14 +140,56 @@ h6 {
   right: 0;
   bottom: 0;
 }
-.project6 {
+.image-generator {
+  /*image generator gif*/
+  background: url("../imgPF/image-generator.gif") no-repeat 50% 30%;
+  background-size: cover;
+  height: 500px;
+  cursor: pointer;
+}
+
+.image-generator::after {
+  content: "generating images";
+  font-family: "Roboto Mono";
+  font-size: 34px;
+  position: relative;
+  color: #fff;
+  display: block;
+  top: 40%;
+  left: -50%;
+  right: 0;
+  bottom: 0;
+}
+.blockchain-site {
+  /*blockchain site gif*/
+  background: url("../imgPF/3DLogo.gif") no-repeat 60% 10%;
+  background-size: cover;
+  height: 500px;
+  cursor: pointer;
+}
+
+.blockchain-site::after {
+  content: "3D";
+  font-family: "Roboto Mono";
+  font-size: 34px;
+  position: relative;
+  background: -webkit-linear-gradient(left, lightgrey, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+  top: 50%;
+  left: 100%;
+  right: 0;
+  bottom: 0;
+}
+.chrome-redesign-concept {
   /*google chrome concept*/
   background: url("../imgPF/GoogleHomepage.jpg") no-repeat;
   background-size: cover;
   height: 400px;
   cursor: pointer;
 }
-.project6::after {
+.chrome-redesign-concept::after {
   content: "chrome concept.";
   font-family: "Roboto Mono";
   font-size: 34px;
@@ -169,12 +211,14 @@ h6 {
   .vertical {
     display: none;
   }
-  .project1::after,
-  .project2::after,
-  .project3::after,
-  .project4::after,
-  .project5::after,
-  .project6::after {
+  .personal-portfolio::after,
+  .tiktok-redesign::after,
+  .chess-app::after,
+  .notes-app::after,
+  .case-converter::after,
+  .image-generator::after,
+  .blockchain-site::after,
+  .chrome-redesign-concept::after {
     display: none;
   }
 }

@@ -39,7 +39,7 @@ const Navbar = () => {
     }).to("#menu li a", {
       opacity: 1, // Animate the opacity to 1
     });
-  }, []);
+  }, [tl]);
 
   return (
     <>
@@ -55,7 +55,7 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="portfolio">
+            <NavLink to="portfolio-projects">
               portfolio<span>.</span>
             </NavLink>
           </li>
@@ -105,7 +105,7 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink
-              to="/portfolio"
+              to="/portfolio-projects"
               onClick={handleResizeClick}
               className={resizeActive ? "on" : ""}
             >

@@ -34,22 +34,42 @@ const PortfolioDisplay = () => {
         <div className="whitespace"></div>
 
         <div className="row">
+          <div className="col-lg-7"></div>
+
+          <Link
+            className="col-lg-4 no-underline project image-generator wow fadeInUp"
+            to="/projects/image-generator"
+          ></Link>
+
+          <div className="col-lg-6"></div>
+        </div>
+
+        <div className="row">
+          <div className="col-lg-1"></div>
+
+          <Link
+            className="col-lg-5 no-underline project blockchain-site wow fadeInUp"
+            to="/projects/blockchain-site"
+          ></Link>
+
+          <div className="col-lg-6"></div>
+        </div>
+
+        <div className="row">
           <div className="col-lg-8"></div>
 
           <Link
-            className="col-lg-4 no-underline project project6 wow fadeInUp"
-            to="/projects/project6"
+            className="col-lg-4 no-underline project chrome-redesign-concept wow fadeInUp"
+            to="/projects/chrome-redesign-concept"
           ></Link>
-
-          {/* <!--<div className="col-lg-1"></div>--> */}
         </div>
         <div className="whitespace"></div>
         <div className="whitespace"></div>
 
         <div className="row">
           <Link
-            className="col-lg-5 no-underline project project1 wow fadeInUp"
-            to="/projects/project1"
+            className="col-lg-5 no-underline project personal-portfolio wow fadeInUp"
+            to="/projects/personal-portfolio"
           ></Link>
 
           <div className="col-lg-4"></div>
@@ -61,16 +81,16 @@ const PortfolioDisplay = () => {
           <div className="col-lg-8"></div>
 
           <Link
-            className="col-lg-4 no-underline project project2 wow fadeInUp"
+            className="col-lg-4 no-underline project tiktok-redesign wow fadeInUp"
             data-wow-delay="1.4s"
-            to="/projects/project2"
+            to="/projects/tiktok-redesign"
           ></Link>
         </div>
 
         <div className="row">
           <Link
-            className="col-lg-6 no-underline project project3 wow fadeInUp"
-            to="/projects/project3"
+            className="col-lg-6 no-underline project chess-app wow fadeInUp"
+            to="/projects/chess-app"
           ></Link>
 
           <div className="col-lg-6"></div>
@@ -80,8 +100,8 @@ const PortfolioDisplay = () => {
           <div className="col-lg-7"></div>
 
           <Link
-            className="col-lg-4 no-underline project project4 wow fadeInUp"
-            to="/projects/project4"
+            className="col-lg-4 no-underline project notes-app wow fadeInUp"
+            to="/projects/notes-app"
           ></Link>
 
           <div className="col-lg-1"></div>
@@ -94,8 +114,8 @@ const PortfolioDisplay = () => {
           <div className="col-lg-1"></div>
 
           <Link
-            className="col-lg-5 no-underline project project5 wow fadeInUp"
-            to="/projects/project5"
+            className="col-lg-5 no-underline project case-converter wow fadeInUp"
+            to="/projects/case-converter"
           ></Link>
 
           <div className="col-lg-6"></div>

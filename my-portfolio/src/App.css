@@ -18,11 +18,19 @@ body {
   .whitespace {
     display: none;
   }
+  .wrapper {
+    overflow-x: hidden;
+  }
+}
+@media (min-width: 768px) {
+  .wrapper {
+    overflow-x: hidden;
+  }
 }
 @media (max-width: 1024px) {
-  .whitespace {
+  /* .whitespace {
     display: none;
-  }
+  } */
 }
 @media screen and (max-width: 52em) {
   /*.next{

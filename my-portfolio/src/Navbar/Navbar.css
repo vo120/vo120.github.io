@@ -146,7 +146,8 @@ nav #menu li a:hover {
 }
 
 /* After new toggle logic */
-@media (min-width: 800px) {
+@media (min-width: 1025px) {
+  /* 800px */
   #resize {
     visibility: hidden !important;
   }

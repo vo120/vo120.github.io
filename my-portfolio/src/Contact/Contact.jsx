@@ -23,6 +23,16 @@ const Contact = () => {
                 since you've stopped by, why don't you say hello? <br />
                 I'd love to hear from you. 😊
               </p>
+              <p
+                className="wow fadeInUp"
+                data-wow-delay="1.2s"
+                style={{ fontWeight: "bold" }}
+              >
+                <br />
+                (Update Jan. 2022): Form is currently under-construction. Kindly
+                use the "email me" link at the bottom of the page if you need to
+                contact me. Thank you for your understanding. 😊
+              </p>
             </div>
           </div>
         </div>
@@ -30,7 +40,7 @@ const Contact = () => {
       {/* <!---------------where hero section ends---------------> */}
       {/* <!--<div className="whitespace"></div>--> */}
       {/* <!---------------where form section starts-------------> */}
-      <div className="container-fluid">
+      <div className="container-fluid" id="contact">
         <div className="row">
           <div className="col-lg-8">
             <form

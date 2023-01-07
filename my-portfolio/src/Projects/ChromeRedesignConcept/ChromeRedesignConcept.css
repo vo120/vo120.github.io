@@ -1,0 +1,147 @@
+/*--------------------project page---------------------*/
+
+.prev,
+.next {
+  color: #e1dcdc;
+  cursor: pointer;
+  width: 50%;
+}
+
+.prev p,
+.next p {
+  display: inline-block; /* Set the display property to inline-block */
+  color: #e1dcdc;
+  margin: 0 10px; /* Add some spacing around the element */
+}
+
+.prev p {
+  text-align: left; /* Align the text to the left */
+}
+
+a.col-lg-6.next,
+.next p {
+  text-align: right; /* Align the text to the right */
+}
+.col {
+  display: block;
+  margin: 0 10px;
+  padding: 15px;
+  background: #1e1e1e;
+  transition: all 200ms;
+  border-radius: 15px;
+}
+.col:hover {
+  transform: translateY(-6px);
+  transition: all 200ms;
+}
+
+.col > img {
+  display: block;
+  width: 100%;
+  margin: 0 0 15px 0;
+}
+.col h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 16px; /*14px before*/
+  text-transform: uppercase;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.row#google > .col {
+  width: 100%; /*before 60%*/
+  padding: 15px;
+  height: min-content; /*before 100%*/
+  border-radius: 15px;
+  break-inside: avoid;
+}
+.item1 {
+  grid-column: 1 /2;
+}
+.item2 {
+  grid-column: 2/3;
+}
+.item3 {
+  grid-column: 3/4;
+  grid-row: 1 / 3;
+}
+.item4 {
+  grid-column: auto;
+  grid-row: auto;
+}
+.item5,
+.item6 {
+  grid-column: auto;
+  grid-row: 1;
+}
+.item7,
+.item8 {
+  grid-column: auto;
+  grid-row: 2;
+}
+
+.container > .row#google {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "topleft topright"
+    "middleleft middleright"
+    "bottomleft bottomright";
+  width: 100%;
+  row-gap: 10px;
+  margin: auto;
+  align-items: center;
+}
+.row#google > .item1 {
+  grid-area: topleft;
+  width: auto;
+  height: 439px;
+}
+.row#google > .item1 > img,
+.row#google > .item2 > img {
+  /*to match pic dimensions next to it*/
+  height: 378px;
+}
+.row#google > .item6 {
+  grid-area: topright;
+  width: auto;
+}
+.row#google > .item2 {
+  grid-area: middleleft;
+  width: auto;
+}
+.row#google > .item5 {
+  grid-area: middleright;
+  width: auto;
+}
+.row#google > .item3 {
+  grid-area: bottomleft;
+  width: auto;
+}
+.row#google > .item4 {
+  grid-area: bottomright;
+  width: auto;
+}
+
+@media (max-width: 1000px) /*900px before*/ {
+  .row {
+    width: auto;
+    float: none;
+  }
+  .row#google > .item1 {
+    height: auto;
+  }
+  .row#google > .item1 > img,
+  .row#google > .item2 > img {
+    /*to match pic dimensions next to it*/
+    height: auto;
+  }
+}
+@media screen and (max-width: 52em) {
+  .project-nav,
+  .row,
+  .col-lg-6 {
+    bottom: -1rem; /*-90rem before*/
+  }
+}

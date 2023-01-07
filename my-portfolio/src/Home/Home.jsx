@@ -41,19 +41,17 @@ const Home = () => {
             <div className="col-lg-8"></div>
 
             <Link
-              className="col-lg-4 no-underline project project6 wow fadeInUp"
-              to="/projects/project6"
+              className="col-lg-4 no-underline project image-generator wow fadeInUp"
+              to="/projects/image-generator"
             ></Link>
-
-            {/* <!--<div className="col-lg-1"></div>--> */}
           </div>
 
           <div className="whitespace"></div>
 
           <div className="row">
             <Link
-              className="col-lg-5 no-underline project project1 wow fadeInUp"
-              to="/projects/project1"
+              className="col-lg-5 no-underline project blockchain-site wow fadeInUp"
+              to="/projects/blockchain-site"
             ></Link>
 
             <div className="col-lg-4"></div>
@@ -63,8 +61,8 @@ const Home = () => {
             <div className="col-lg-8"></div>
 
             <Link
-              className="col-lg-4 no-underline project project2 wow fadeInUp"
-              to="/projects/project2"
+              className="col-lg-4 no-underline project tiktok-redesign wow fadeInUp"
+              to="/projects/tiktok-redesign"
             ></Link>
           </div>
 
@@ -72,8 +70,8 @@ const Home = () => {
 
           <div className="row">
             <Link
-              className="col-lg-6 no-underline project project3 wow fadeInUp"
-              to="/projects/project3"
+              className="col-lg-6 no-underline project chess-app wow fadeInUp"
+              to="/projects/chess-app"
             ></Link>
 
             <div className="col-lg-6"></div>
@@ -85,8 +83,8 @@ const Home = () => {
             <div className="col-lg-7"></div>
 
             <Link
-              className="col-lg-4 no-underline project project4 wow fadeInUp"
-              to="/projects/project4"
+              className="col-lg-4 no-underline project notes-app wow fadeInUp"
+              to="/projects/notes-app"
             ></Link>
 
             <div className="col-lg-1"></div>
@@ -95,7 +93,6 @@ const Home = () => {
           <div className="whitespace"></div>
         </div>
         {/* <!--------------- where project section ends------------> */}
-
         <br />
         <br />
         <br />
