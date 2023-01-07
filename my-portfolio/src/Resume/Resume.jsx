@@ -138,6 +138,10 @@ const Resume = () => {
               Programmed a Random AI Image Generator using OpenAI's DALL-E API
             </li>
             <li>
+              Created website with 3D logo using React-Three-Fiber for a
+              blockchain client
+            </li>
+            <li>
               Built my portfolio website using HTML, CSS, JavaScript, jQuery,
               Boostrap 4, WOW.js, Animate.js (now updated with React.js & GSAP)
             </li>

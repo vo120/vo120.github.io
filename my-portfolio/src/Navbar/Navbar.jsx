@@ -22,8 +22,8 @@ const Navbar = () => {
 
   useEffect(() => {
     tl.from(brandRef.current, {
-      duration: 1,
-      // delay: 0.4,
+      duration: 0.5,
+      delay: 0.3,
       y: 10,
       opacity: 0, // Set the initial opacity to 0
       ease: Expo.easeInOut,
@@ -32,10 +32,10 @@ const Navbar = () => {
     });
     tl.from("#menu li a", {
       stagger: 0.1,
-      duration: 1,
-      // delay: 0.4,
+      duration: 0.5,
+      delay: 0.3,
       opacity: 0, // Set the initial opacity to 0
-      ease: Expo.easeInOut,
+      ease: Expo.easeIn,
     }).to("#menu li a", {
       opacity: 1, // Animate the opacity to 1
     });

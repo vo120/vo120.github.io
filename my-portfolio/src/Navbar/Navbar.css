@@ -14,7 +14,7 @@ nav #brand {
 }
 nav #brand a {
   color: #fff;
-  transition: all 0.3s ease-out;
+  /* transition: all 0.3s ease-out; */
 }
 nav #brand a:hover {
   text-decoration: none;
@@ -32,7 +32,7 @@ nav #menu li {
   font-weight: 300;
   line-height: 80px;
   position: relative;
-  transition: all 0.3s ease-out;
+  /* transition: all 0.1s ease-out; */
 }
 
 nav #menu li span {
@@ -80,7 +80,7 @@ nav #menu li a:hover {
   height: 100%;
   visibility: hidden;
   opacity: 0;
-  transition: all 1s ease-out;
+  transition: all 0.4s ease-out;
 }
 
 #resize #menu {
@@ -101,7 +101,7 @@ nav #menu li a:hover {
   min-height: 50px;
   font-weight: bold;
   cursor: pointer;
-  transition: all 0.3s ease-out;
+  /* transition: all 0.3s ease-out; */
 }
 
 #resize li:nth-child(1) {

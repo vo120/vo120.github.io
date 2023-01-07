@@ -65,7 +65,11 @@ const ImageGenerator = () => {
               </p>
               <p className="wow fadeInUp" data-wow-delay="1.8s">
                 Check it out{" "}
-                <a href="#" target="_blank" style={{ textDecoration: "none" }}>
+                <a
+                  href="https://image-generator-app-vo120.vercel.app/"
+                  target="_blank"
+                  style={{ textDecoration: "none" }}
+                >
                   here!
                 </a>
               </p>
