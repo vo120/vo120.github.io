@@ -176,8 +176,8 @@ a.no-underline {
   color: #fff;
   display: block;
   top: 30%;
-  left: -60%;
-  right: 80px;
+  left: 72%;
+  /* right: 39%; */
   bottom: 0;
 }
 
@@ -196,8 +196,8 @@ a.no-underline {
   color: #fff;
   display: block;
   top: 60%;
-  left: 90%;
-  right: 0;
+  /* left: 90%; */
+  right: 57%;
   bottom: 0;
 }
 .notes-app {
@@ -259,7 +259,27 @@ a.no-underline {
   color: #fff;
   display: block;
   top: 40%;
-  left: -50%;
+  left: 89%;
+  right: 0;
+  bottom: 0;
+}
+.bank-app {
+  /*bank app gif*/
+  background: url("../imgPF/bank-app.gif") no-repeat 50% 30%;
+  background-size: cover;
+  height: 500px;
+  cursor: pointer;
+}
+
+.bank-app::after {
+  content: "finances re-imagined";
+  font-family: "Roboto Mono";
+  font-size: 34px;
+  position: relative;
+  color: #fff;
+  display: flex;
+  top: 40%;
+  left: -55%;
   right: 0;
   bottom: 0;
 }
@@ -274,15 +294,15 @@ a.no-underline {
 .blockchain-site::after {
   content: "3D";
   font-family: "Roboto Mono";
-  font-size: 34px;
+  font-size: 40px;
   position: relative;
   background: -webkit-linear-gradient(left, lightgrey, white);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: block;
   top: 50%;
-  left: 100%;
-  right: 0;
+  left: -7%;
+  /* right: 100%; */
   bottom: 0;
 }
 .chrome-redesign-concept {
@@ -321,7 +341,8 @@ a.no-underline {
   .case-converter::after,
   .image-generator::after,
   .blockchain-site::after,
-  .chrome-redesign-concept::after {
+  .chrome-redesign-concept::after,
+  .bank-app::after {
     display: none;
   }
 }

@@ -58,10 +58,11 @@ const Resume = () => {
               <ul className="col-md-4 wow fadeInDown" data-wow-delay="1.8s">
                 <li>Java, Python</li>
                 <li>SQL, SPSS, SAS, R</li>
-                <li>HTML, CSS, JavaScript</li>
-                <li>React, React-Three-Fiber, Node.js</li>
-                <li>Bootstrap, jQuery, GSAP</li>
+                <li>Node.js, Express.js</li>
+                <li>HTML, CSS, JavaScript, TypeScript</li>
+                <li>React, React-Three-Fiber, React Native</li>
                 <li>Eclipse, IntelliJ, Webstorm, PyCharm</li>
+                <li>Bootstrap, jQuery, GSAP, Expo</li>
               </ul>
               <ul className="col-md-4 text-center">
                 <li>
@@ -134,6 +135,8 @@ const Resume = () => {
           data-wow-delay="1.4s"
         >
           <ul className="col-md-12">
+            <li>Working on building a Blog Site with React.js and GraphQL</li>
+            <li> Built a mobile Bank App with React Native in 2 days</li>
             <li>
               Programmed a Random AI Image Generator using OpenAI's DALL-E API
             </li>
@@ -155,7 +158,6 @@ const Resume = () => {
               Created a 2-line Calculator in Python that can run simple and
               complex math problems (ex. discrete math)
             </li>
-            <li>Created a Simple Bank Application in Java</li>
           </ul>
         </div>
         <div className="row wow fadeInDown" data-wow-delay="1.5s">

@@ -117,7 +117,7 @@ const ImageGenerator = () => {
 
             <Link
               className="col-lg-6 no-underline next"
-              to="/projects/personal-portfolio"
+              to="/projects/bank-app"
             >
               <p id="next">
                 next

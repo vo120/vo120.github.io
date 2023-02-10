@@ -14,6 +14,7 @@ import CaseConverter from "./Projects/CaseConverter/CaseConverter.jsx";
 import BlockchainSite from "./Projects/BlockchainSite/BlockchainSite.jsx";
 import ImageGenerator from "./Projects/ImageGenerator/ImageGenerator.jsx";
 import ChromeRedesignConcept from "./Projects/ChromeRedesignConcept/ChromeRedesignConcept";
+import BankApp from "./Projects/BankApp/BankApp.jsx";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -31,7 +32,9 @@ import { useEffect } from "react";
  * Project5: CaseConverter
  * Project6: ChromeRedesign
  * Project7: Blockchain website for web3,
- * Project8: OpenAI Image Generator **/
+ * Project8: OpenAI Image Generator
+ * Project9: BankApp
+ * **/
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -56,6 +59,7 @@ const router = createBrowserRouter(
         />
         <Route path="/projects/blockchain-site" element={<BlockchainSite />} />
         <Route path="/projects/image-generator" element={<ImageGenerator />} />
+        <Route path="/projects/bank-app" element={<BankApp />} />
       </Route>
     </>
   ),

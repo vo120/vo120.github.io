@@ -39,7 +39,7 @@ h6 {
   position: relative;
 }
 
-.personal-portfolio {
+.personal-portfolio-pd {
   background: url("../imgPF/portfolio.gif") no-repeat 60% 10%;
   background-size: contain;
   border: 1px outset #a2a0a0;
@@ -47,7 +47,7 @@ h6 {
   cursor: pointer;
 }
 
-.personal-portfolio::after {
+.personal-portfolio-pd::after {
   content: "building my portfolio.";
   font-family: "Roboto Mono";
   font-size: 34px;
@@ -59,13 +59,13 @@ h6 {
   right: 0;
   bottom: 0;
 }
-.tiktok-redesign {
+.tiktok-redesign-pd {
   background: url("../imgPF/TikTok Redesign.gif") no-repeat 60% 10%;
   background-size: contain;
   cursor: pointer;
 }
 
-.tiktok-redesign::after {
+.tiktok-redesign-pd::after {
   content: "redesigning tiktok.";
   font-family: "Roboto Mono";
   font-size: 34px;
@@ -78,14 +78,14 @@ h6 {
   bottom: 0;
 }
 
-.chess-app {
+.chess-app-pd {
   /*chess engine gif*/
   background: url("../imgPF/chessgametrimmed.gif") no-repeat 50% 55%;
   background-size: contain;
   cursor: pointer;
 }
 
-.chess-app::after {
+.chess-app-pd::after {
   content: "building chess.";
   font-family: "Roboto Mono";
   font-size: 34px;
@@ -97,7 +97,7 @@ h6 {
   right: 0;
   bottom: 0;
 }
-.notes-app {
+.notes-app-pd {
   /*notes app gif*/
   background: url("../imgPF/NotesApp.gif") no-repeat 0 30%;
   background-size: cover;
@@ -106,7 +106,7 @@ h6 {
   cursor: pointer;
 }
 
-.notes-app::after {
+.notes-app-pd::after {
   content: "taking notes.";
   font-family: "Roboto Mono";
   font-size: 34px;
@@ -118,7 +118,7 @@ h6 {
   right: 0;
   bottom: 0;
 }
-.case-converter {
+.case-converter-pd {
   /*case converter gif*/
   background: url("../imgPF/CaseConverter.gif") no-repeat 0 60%;
   background-size: cover;
@@ -126,7 +126,7 @@ h6 {
   cursor: pointer;
 }
 
-.case-converter::after {
+.case-converter-pd::after {
   content: "converting cases";
   font-family: "Roboto Mono";
   font-size: 34px;
@@ -140,7 +140,7 @@ h6 {
   right: 0;
   bottom: 0;
 }
-.image-generator {
+.image-generator-pd {
   /*image generator gif*/
   background: url("../imgPF/image-generator.gif") no-repeat 50% 30%;
   background-size: cover;
@@ -148,7 +148,7 @@ h6 {
   cursor: pointer;
 }
 
-.image-generator::after {
+.image-generator-pd::after {
   content: "generating images";
   font-family: "Roboto Mono";
   font-size: 34px;
@@ -160,7 +160,27 @@ h6 {
   right: 0;
   bottom: 0;
 }
-.blockchain-site {
+.bank-app-pd {
+  /*bank app gif*/
+  background: url("../imgPF/bank-app.gif") no-repeat 50% 30%;
+  background-size: cover;
+  height: 500px;
+  cursor: pointer;
+}
+
+.bank-app-pd::after {
+  content: "finances re-imagined";
+  font-family: "Roboto Mono";
+  font-size: 34px;
+  position: relative;
+  color: #fff;
+  display: flex;
+  top: 50%;
+  left: 75%;
+  right: 0;
+  bottom: 0;
+}
+.blockchain-site-pd {
   /*blockchain site gif*/
   background: url("../imgPF/3DLogo.gif") no-repeat 60% 10%;
   background-size: cover;
@@ -168,7 +188,7 @@ h6 {
   cursor: pointer;
 }
 
-.blockchain-site::after {
+.blockchain-site-pd::after {
   content: "3D";
   font-family: "Roboto Mono";
   font-size: 34px;
@@ -182,14 +202,14 @@ h6 {
   right: 0;
   bottom: 0;
 }
-.chrome-redesign-concept {
+.chrome-redesign-concept-pd {
   /*google chrome concept*/
   background: url("../imgPF/GoogleHomepage.jpg") no-repeat;
   background-size: cover;
   height: 400px;
   cursor: pointer;
 }
-.chrome-redesign-concept::after {
+.chrome-redesign-concept-pd::after {
   content: "chrome concept.";
   font-family: "Roboto Mono";
   font-size: 34px;
@@ -211,14 +231,15 @@ h6 {
   .vertical {
     display: none;
   }
-  .personal-portfolio::after,
-  .tiktok-redesign::after,
-  .chess-app::after,
-  .notes-app::after,
-  .case-converter::after,
-  .image-generator::after,
-  .blockchain-site::after,
-  .chrome-redesign-concept::after {
+  .personal-portfolio-pd::after,
+  .tiktok-redesign-pd::after,
+  .chess-app-pd::after,
+  .notes-app-pd::after,
+  .case-converter-pd::after,
+  .image-generator-pd::after,
+  .blockchain-site-pd::after,
+  .chrome-redesign-concept-pd::after,
+  .bank-app-pd::after {
     display: none;
   }
 }

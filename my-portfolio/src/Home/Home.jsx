@@ -41,8 +41,8 @@ const Home = () => {
             <div className="col-lg-8"></div>
 
             <Link
-              className="col-lg-4 no-underline project image-generator wow fadeInUp"
-              to="/projects/image-generator"
+              className="col-lg-4 no-underline project bank-app wow fadeInUp"
+              to="/projects/bank-app"
             ></Link>
           </div>
 
@@ -50,8 +50,8 @@ const Home = () => {
 
           <div className="row">
             <Link
-              className="col-lg-5 no-underline project blockchain-site wow fadeInUp"
-              to="/projects/blockchain-site"
+              className="col-lg-5 no-underline project image-generator wow fadeInUp"
+              to="/projects/image-generator"
             ></Link>
 
             <div className="col-lg-4"></div>
@@ -61,8 +61,8 @@ const Home = () => {
             <div className="col-lg-8"></div>
 
             <Link
-              className="col-lg-4 no-underline project tiktok-redesign wow fadeInUp"
-              to="/projects/tiktok-redesign"
+              className="col-lg-4 no-underline project blockchain-site wow fadeInUp"
+              to="/projects/blockchain-site"
             ></Link>
           </div>
 
@@ -70,8 +70,8 @@ const Home = () => {
 
           <div className="row">
             <Link
-              className="col-lg-6 no-underline project chess-app wow fadeInUp"
-              to="/projects/chess-app"
+              className="col-lg-6 no-underline project tiktok-redesign wow fadeInUp"
+              to="/projects/tiktok-redesign"
             ></Link>
 
             <div className="col-lg-6"></div>
@@ -83,8 +83,8 @@ const Home = () => {
             <div className="col-lg-7"></div>
 
             <Link
-              className="col-lg-4 no-underline project notes-app wow fadeInUp"
-              to="/projects/notes-app"
+              className="col-lg-4 no-underline project chess-app wow fadeInUp"
+              to="/projects/chess-app"
             ></Link>
 
             <div className="col-lg-1"></div>
