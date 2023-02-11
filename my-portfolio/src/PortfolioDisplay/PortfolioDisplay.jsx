@@ -33,6 +33,16 @@ const PortfolioDisplay = () => {
       <div className="container-fluid">
         <div className="whitespace"></div>
         <div className="row">
+          <div className="col-lg-7"></div>
+
+          <Link
+            className="col-lg-4 no-underline project blog-site-pd wow fadeInUp"
+            to="/projects/blog-site"
+          ></Link>
+
+          <div className="col-lg-6"></div>
+        </div>
+        <div className="row">
           <Link
             className="col-lg-5 no-underline project bank-app-pd wow fadeInUp"
             to="/projects/bank-app"
@@ -52,7 +62,7 @@ const PortfolioDisplay = () => {
         </div>
 
         <div className="row">
-          <div className="col-lg-1"></div>
+          {/* <div className="col-lg-1"></div> */}
 
           <Link
             className="col-lg-5 no-underline project blockchain-site-pd wow fadeInUp"

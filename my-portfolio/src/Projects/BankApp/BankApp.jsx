@@ -144,7 +144,7 @@ const BankApp = () => {
 
             <Link
               className="col-lg-6 no-underline next"
-              to="/projects/personal-portfolio"
+              to="/projects/blog-site"
             >
               <p id="next">
                 next

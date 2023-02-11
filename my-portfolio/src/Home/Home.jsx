@@ -38,6 +38,15 @@ const Home = () => {
           <div className="whitespace"></div>
 
           <div className="row">
+            <Link
+              className="col-lg-5 no-underline project blog-site wow fadeInUp"
+              to="/projects/blog-site"
+            ></Link>
+
+            <div className="col-lg-4"></div>
+          </div>
+
+          <div className="row">
             <div className="col-lg-8"></div>
 
             <Link
@@ -75,19 +84,6 @@ const Home = () => {
             ></Link>
 
             <div className="col-lg-6"></div>
-          </div>
-
-          <div className="whitespace"></div>
-
-          <div className="row">
-            <div className="col-lg-7"></div>
-
-            <Link
-              className="col-lg-4 no-underline project chess-app wow fadeInUp"
-              to="/projects/chess-app"
-            ></Link>
-
-            <div className="col-lg-1"></div>
           </div>
 
           <div className="whitespace"></div>

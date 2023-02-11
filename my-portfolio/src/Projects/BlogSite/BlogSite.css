@@ -1,5 +1,4 @@
 /*--------------------project page---------------------*/
-
 .prev,
 .next {
   color: #e1dcdc;
@@ -22,9 +21,10 @@ a.col-lg-6.next,
 .next p {
   text-align: right; /* Align the text to the right */
 }
+
 .col {
   display: block;
-  margin: 0 10px;
+  margin: 10px 10px;
   padding: 15px;
   background: #1e1e1e;
   transition: all 200ms;
@@ -47,27 +47,6 @@ a.col-lg-6.next,
   text-transform: uppercase;
   margin-bottom: 0;
   padding-bottom: 0;
-}
-.row#tiktok > .col {
-  width: 100%; /*before 60%*/
-  padding: 15px;
-  height: min-content; /*before 100%*/
-  border-radius: 15px;
-  break-inside: avoid;
-}
-.container > .row#tiktok {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-template-rows: auto auto auto auto auto;
-  width: 100%;
-  gap: 10px;
-  /*margin: 0 0 15px 0;*/
-  margin: auto;
-}
-.row#tiktok > .col > img {
-  width: 100%;
-  margin: 0 0 15px 0;
-  object-fit: cover;
 }
 .item1 {
   grid-column: 1 /2;
@@ -93,31 +72,34 @@ a.col-lg-6.next,
   grid-column: auto;
   grid-row: 2;
 }
-
+/* .row#blogSite > .col {
+  display: inline-block;
+  width: 50px;
+  margin-left: 0;
+  height: auto;
+  transform: scale(0.8);
+} */
+.row#blogSite .col {
+  padding: 10px 0 5px 0;
+  margin: 15px;
+  height: 100%;
+}
+.row#blogSite .col > img {
+  width: 400px;
+  margin: auto;
+}
 @media (max-width: 1000px) /*900px before*/ {
   .row {
     width: auto;
     float: none;
   }
 }
-
 @media screen and (max-width: 52em) {
-  /*.next{
-    top: 98rem;
-  }*/
-  .container > .row#tiktok {
-    display: flex;
-    /* grid-template-columns: auto auto auto auto; */
-    /* grid-template-rows: auto auto auto auto auto; */
-    width: 100%;
-    /* gap: 10px; */
-    margin: 0 0 15px 0;
-    /* margin: auto; */
-  }
-
   .project-nav,
   .row,
   .col-lg-6 {
     bottom: -1rem; /*-90rem before*/
+    /* display: inline;
+    left: -10px; */
   }
 }

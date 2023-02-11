@@ -58,11 +58,11 @@ const Resume = () => {
               <ul className="col-md-4 wow fadeInDown" data-wow-delay="1.8s">
                 <li>Java, Python</li>
                 <li>SQL, SPSS, SAS, R</li>
-                <li>Node.js, Express.js</li>
+                <li>Node.js, Express.js, GraphGL</li>
                 <li>HTML, CSS, JavaScript, TypeScript</li>
-                <li>React, React-Three-Fiber, React Native</li>
+                <li>React.js, React-Three-Fiber, React Native, Next.js</li>
                 <li>Eclipse, IntelliJ, Webstorm, PyCharm</li>
-                <li>Bootstrap, jQuery, GSAP, Expo</li>
+                <li>Bootstrap, jQuery, GSAP, Expo, Vercel </li>
               </ul>
               <ul className="col-md-4 text-center">
                 <li>
@@ -135,7 +135,7 @@ const Resume = () => {
           data-wow-delay="1.4s"
         >
           <ul className="col-md-12">
-            <li>Working on building a Blog Site with React.js and GraphQL</li>
+            <li>Built a Blog Site with React.js, GraphQL, Next.js, & Vercel</li>
             <li> Built a mobile Bank App with React Native in 2 days</li>
             <li>
               Programmed a Random AI Image Generator using OpenAI's DALL-E API
@@ -148,16 +148,11 @@ const Resume = () => {
               Built my portfolio website using HTML, CSS, JavaScript, jQuery,
               Boostrap 4, WOW.js, Animate.js (now updated with React.js & GSAP)
             </li>
-            <li>Programmed a Case Converter using JavaScript, HTML, & CSS</li>
             <li>
               Built and designed a Notes app in JavaScript, including designing,
               and implementing its user interfaces
             </li>
             <li>Built a Chess Game in Python (GUI)</li>
-            <li>
-              Created a 2-line Calculator in Python that can run simple and
-              complex math problems (ex. discrete math)
-            </li>
           </ul>
         </div>
         <div className="row wow fadeInDown" data-wow-delay="1.5s">

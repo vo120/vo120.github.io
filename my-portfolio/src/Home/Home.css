@@ -71,6 +71,7 @@
   text-align: center;
   letter-spacing: -2px;
   line-height: 58px;
+  overflow-y: hidden;
 }
 
 @media (max-width: 500px) {
@@ -283,6 +284,28 @@ a.no-underline {
   right: 0;
   bottom: 0;
 }
+.blog-site {
+  /*blog site gif*/
+  background: url("../imgPF/blog-site.gif") no-repeat 50% 30%;
+  background-size: cover;
+  height: 500px !important;
+  cursor: pointer;
+}
+
+.blog-site::after {
+  content: "blogging";
+  font-family: "Roboto Mono";
+  font-size: 34px;
+  position: relative;
+  background: -webkit-linear-gradient(left, lightgrey, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  top: 50%;
+  left: 95%;
+  right: 0;
+  bottom: 0;
+}
 .blockchain-site {
   /*blockchain site gif*/
   background: url("../imgPF/3DLogo.gif") no-repeat 60% 10%;
@@ -342,7 +365,8 @@ a.no-underline {
   .image-generator::after,
   .blockchain-site::after,
   .chrome-redesign-concept::after,
-  .bank-app::after {
+  .bank-app::after,
+  .blog-site::after {
     display: none;
   }
 }

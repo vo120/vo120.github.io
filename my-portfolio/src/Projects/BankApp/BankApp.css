@@ -72,13 +72,22 @@ a.col-lg-6.next,
   grid-column: auto;
   grid-row: 2;
 }
-.row#bankApp > .col {
+/* .row#bankApp > .col {
   display: inline-block;
   width: 50px;
   margin-left: 0;
   height: auto;
   transform: scale(0.8);
+} */
+/* .row#bankApp .col {
+  padding: 10px 0 5px 0;
+  margin: 15px;
+  height: 100%;
 }
+.row#bankApp .col > img {
+  width: 100%;
+  margin: auto;
+} */
 @media (max-width: 1000px) /*900px before*/ {
   .row {
     width: auto;
@@ -90,5 +99,7 @@ a.col-lg-6.next,
   .row,
   .col-lg-6 {
     bottom: -1rem; /*-90rem before*/
+    /* display: inline;
+    left: -10px; */
   }
 }
