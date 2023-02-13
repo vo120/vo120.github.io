@@ -70,6 +70,7 @@ const BlogSite = () => {
                 <a
                   href="https://vanessa-blog-site.vercel.app"
                   target="_blank"
+                  rel="noreferrer noopener"
                   style={{ textDecoration: "none" }}
                 >
                   &nbsp;Here

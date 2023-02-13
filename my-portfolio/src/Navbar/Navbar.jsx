@@ -32,7 +32,7 @@ const Navbar = () => {
     });
     tl.from("#menu li a", {
       stagger: 0.1,
-      duration: 0.5,
+      duration: 0.3,
       delay: 0.3,
       opacity: 0, // Set the initial opacity to 0
       ease: Expo.easeIn,

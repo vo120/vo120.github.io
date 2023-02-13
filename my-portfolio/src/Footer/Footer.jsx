@@ -29,6 +29,7 @@ const Footer = () => {
                 <a
                   href="https://www.linkedin.com/in/vanessaoru/"
                   target="_blank"
+                  rel="noreferrer noopener"
                 >
                   <h4 className="wow fadeInUp" data-wow-delay="0.2s">
                     ln /vanessaoru
@@ -45,12 +46,20 @@ const Footer = () => {
 
                 <ul>
                   <li id="gh" className="wow fadeInUp" data-wow-delay="0.6s">
-                    <a href="https://github.com/vo120" target="_blank">
+                    <a
+                      href="https://github.com/vo120"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
                       gh
                     </a>
                   </li>
                   <li id="fg" className="wow fadeInUp" data-wow-delay="0.8s">
-                    <a href="https://www.figma.com/@vanessaoru" target="_blank">
+                    <a
+                      href="https://www.figma.com/@vanessaoru"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
                       fg
                     </a>
                   </li>

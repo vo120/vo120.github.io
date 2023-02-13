@@ -68,11 +68,28 @@ const BankApp = () => {
                 <a
                   href="https://github.com/vo120/Bank-App"
                   target="_blank"
+                  rel="noreferrer noopener"
                   style={{ textDecoration: "none" }}
                 >
                   &nbsp;Here
                 </a>
                 !
+              </p>
+              <p className="wow fadeInUp" data-wow-delay="1.8s">
+                Try it out on your phone
+                <a
+                  href="https://expo.dev/@vo120/bank-app?serviceType=classic&distribution=expo-go"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  style={{ textDecoration: "none" }}
+                >
+                  &nbsp;Here
+                </a>
+                !
+              </p>
+              <p className="wow fadeInUp" data-wow-delay="1.8s">
+                Note: if you are using an iPhone, you'll need to sign into the
+                Expo Go App after downloading it.
               </p>
             </div>
           </div>
@@ -86,15 +103,6 @@ const BankApp = () => {
           <br />
           <br />
           <div className="row col-lg-12" id="bankApp">
-            <div className="col">
-              <img
-                src={BankAppGif}
-                alt="gif of bank app user flow"
-                className="wow fadeInLeft"
-                data-wow-delay={(onloadedmetadata = "2s")}
-              />
-              <h2>Bank App in Action</h2>
-            </div>
             <div className="col">
               <img
                 src={BankAppCover}
@@ -121,6 +129,15 @@ const BankApp = () => {
                 data-wow-delay={(onloadedmetadata = "2s")}
               />
               <h2>Bank App Balance Screen</h2>
+            </div>
+            <div className="col">
+              <img
+                src={BankAppGif}
+                alt="gif of bank app user flow"
+                className="wow fadeInLeft"
+                data-wow-delay={(onloadedmetadata = "2s")}
+              />
+              <h2>Bank App in Action</h2>
             </div>
           </div>
         </div>
