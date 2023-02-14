@@ -36,7 +36,7 @@ const ImageGenerator = () => {
                     started :
                   </p>
                   <h6 className="wow fadeInUp" data-wow-delay="1.5s">
-                    6 Jan 2022
+                    6 Jan 2023
                   </h6>
                 </div>
 
@@ -45,7 +45,7 @@ const ImageGenerator = () => {
                     completed :
                   </p>
                   <h6 className="wow fadeInUp" data-wow-delay="1.7s">
-                    6 Jan 2022
+                    6 Jan 2023
                   </h6>
                 </div>
               </div>
