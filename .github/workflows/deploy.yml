@@ -3,8 +3,9 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
+      - main
       - master
-      - claude/portfolio-redesign-hxod9m
+      - "claude/**"
   workflow_dispatch:
 
 permissions:
