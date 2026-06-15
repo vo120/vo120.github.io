@@ -1,147 +1,58 @@
 import React from "react";
 import "./PortfolioDisplay.css";
 import { Link, Outlet } from "react-router-dom";
+import { projects } from "../data/projects";
 
 const PortfolioDisplay = () => {
   return (
-    <>
-      <div className="whitespace"></div>
+    <div className="portfolio">
+      {/* ---------------- header ---------------- */}
+      <header className="portfolio__head shell">
+        <p className="eyebrow" data-reveal="fade">
+          Portfolio · 2021—2026
+        </p>
+        <h1 className="display portfolio__title" data-reveal>
+          Selected <em>projects</em> &amp; experiments.
+        </h1>
+        <p className="portfolio__intro" data-reveal style={{ "--reveal-delay": "0.1s" }}>
+          A mix of shipped products, design concepts and things I built to learn
+          something new — spanning software engineering, UX and a little 3D.
+        </p>
+      </header>
 
-      {/* <!---------------where hero section starts-------------> */}
-      <div className="container">
-        <div className="hero-content">
-          <br />
-          <br />
-
-          <div className="row">
-            <div className="col-lg-8">
-              <h3 className="wow fadeInUp" data-wow-delay="1s">
-                portfolio.
-              </h3>
-              <br />
-              <p className="wow fadeInUp" data-wow-delay="1.2s">
-                {" "}
-                here is some of my work
-              </p>
+      {/* ---------------- index list ---------------- */}
+      <section className="portfolio__grid shell">
+        {projects.map((p, i) => (
+          <Link
+            key={p.slug}
+            to={`/projects/${p.slug}`}
+            className="project-card"
+            data-reveal
+            style={{ "--reveal-delay": `${(i % 2) * 0.08}s` }}
+          >
+            <div className="project-card__media">
+              <img src={p.image} alt={p.title} loading="lazy" />
+              <span className="project-card__index">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <span className="project-card__view">
+                View <span className="arrow">↗</span>
+              </span>
             </div>
-          </div>
-        </div>
-      </div>
-      {/* <!---------------where hero section ends--------------->
+            <div className="project-card__foot">
+              <div className="project-card__title-row">
+                <h3>{p.title}</h3>
+                <span className="project-card__year">{p.year}</span>
+              </div>
+              <p className="project-card__cat">{p.category}</p>
+              <p className="project-card__blurb">{p.blurb}</p>
+            </div>
+          </Link>
+        ))}
+      </section>
 
-<!---------------where project section starts----------> */}
-      <div className="container-fluid">
-        <div className="whitespace"></div>
-        <div className="row">
-          <div className="col-lg-7"></div>
-
-          <Link
-            className="col-lg-4 no-underline project blog-site-pd wow fadeInUp"
-            to="/projects/blog-site"
-          ></Link>
-
-          <div className="col-lg-6"></div>
-        </div>
-        <div className="row">
-          <Link
-            className="col-lg-5 no-underline project bank-app-pd wow fadeInUp"
-            to="/projects/bank-app"
-          ></Link>
-
-          <div className="col-lg-4"></div>
-        </div>
-        <div className="row">
-          <div className="col-lg-7"></div>
-
-          <Link
-            className="col-lg-4 no-underline project image-generator-pd wow fadeInUp"
-            to="/projects/image-generator"
-          ></Link>
-
-          <div className="col-lg-6"></div>
-        </div>
-
-        <div className="row">
-          {/* <div className="col-lg-1"></div> */}
-
-          <Link
-            className="col-lg-5 no-underline project blockchain-site-pd wow fadeInUp"
-            to="/projects/blockchain-site"
-          ></Link>
-
-          <div className="col-lg-6"></div>
-        </div>
-
-        <div className="row">
-          <div className="col-lg-8"></div>
-
-          <Link
-            className="col-lg-4 no-underline project chrome-redesign-concept-pd wow fadeInUp"
-            to="/projects/chrome-redesign-concept"
-          ></Link>
-        </div>
-        <div className="whitespace"></div>
-        <div className="whitespace"></div>
-
-        <div className="row">
-          <Link
-            className="col-lg-5 no-underline project personal-portfolio-pd wow fadeInUp"
-            to="/projects/personal-portfolio"
-          ></Link>
-
-          <div className="col-lg-4"></div>
-        </div>
-
-        <div className="whitespace"></div>
-
-        <div className="row">
-          <div className="col-lg-8"></div>
-
-          <Link
-            className="col-lg-4 no-underline project tiktok-redesign-pd wow fadeInUp"
-            data-wow-delay="1.4s"
-            to="/projects/tiktok-redesign"
-          ></Link>
-        </div>
-
-        <div className="row">
-          <Link
-            className="col-lg-6 no-underline project chess-app-pd wow fadeInUp"
-            to="/projects/chess-app"
-          ></Link>
-
-          <div className="col-lg-6"></div>
-        </div>
-
-        <div className="row">
-          <div className="col-lg-7"></div>
-
-          <Link
-            className="col-lg-4 no-underline project notes-app-pd wow fadeInUp"
-            to="/projects/notes-app"
-          ></Link>
-
-          <div className="col-lg-1"></div>
-        </div>
-
-        <div className="whitespace"></div>
-        <div className="whitespace"></div>
-
-        <div className="row">
-          <div className="col-lg-1"></div>
-
-          <Link
-            className="col-lg-5 no-underline project case-converter-pd wow fadeInUp"
-            to="/projects/case-converter"
-          ></Link>
-
-          <div className="col-lg-6"></div>
-        </div>
-
-        <div className="whitespace"></div>
-        <Outlet />
-      </div>
-    </>
+      <Outlet />
+    </div>
   );
 };
 

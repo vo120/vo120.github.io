@@ -1,99 +1,92 @@
 import React from "react";
 import "./Footer.css";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const year = new Date().getFullYear();
   return (
-    <>
-      <footer className="footer" id="projectPage">
-        <div className="container">
-          <br /> <br />
-          <div className="collab">
-            <div className="row">
-              <div className="col-lg-12">
-                <p className="wow fadeInUp">
-                  Looking for a software engineer? You've come to the right
-                  place!
-                </p>
-              </div>
-            </div>
+    <footer className="footer" id="projectPage">
+      <div className="shell">
+        <div className="footer__cta">
+          <p className="eyebrow" data-reveal="fade">
+            Looking for a software engineer?
+          </p>
+          <Link to="/contact" className="footer__big display" data-reveal>
+            Let's work <em>together</em> <span className="footer__arrow">↗</span>
+          </Link>
+        </div>
+
+        <div className="footer__grid">
+          <div className="footer__col">
+            <span className="footer__label">Connect</span>
+            <a
+              href="https://www.linkedin.com/in/vanessaoru/"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="ul-link"
+            >
+              LinkedIn ↗
+            </a>
+            <a href="mailto:redacted@example.com" className="ul-link">
+              Email me ↗
+            </a>
           </div>
-          <br />
-          <div className="hr">
-            <div className="row"></div>
+
+          <div className="footer__col">
+            <span className="footer__label">Follow</span>
+            <a
+              href="https://github.com/vo120"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="ul-link"
+            >
+              GitHub ↗
+            </a>
+            <a
+              href="https://www.figma.com/@vanessaoru"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="ul-link"
+            >
+              Figma ↗
+            </a>
           </div>
-          <br /> <br />
-          <div className="info">
-            <div className="row">
-              <div className="col-lg-4" id="linkedin">
-                <p className="wow fadeInUp">connect with me</p>
-                <a
-                  href="https://www.linkedin.com/in/vanessaoru/"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <h4 className="wow fadeInUp" data-wow-delay="0.2s">
-                    ln /vanessaoru
-                  </h4>
-                </a>
-                <br />
-                <br />
-              </div>
 
-              <div className="col-lg-4" id="media">
-                <p className="wow fadeInUp" data-wow-delay="0s">
-                  follow me
-                </p>
+          <div className="footer__col">
+            <span className="footer__label">Navigate</span>
+            <Link to="/portfolio-projects" className="ul-link">
+              Work
+            </Link>
+            <Link to="/about" className="ul-link">
+              About
+            </Link>
+            <Link to="/contact" className="ul-link">
+              Contact
+            </Link>
+          </div>
 
-                <ul>
-                  <li id="gh" className="wow fadeInUp" data-wow-delay="0.6s">
-                    <a
-                      href="https://github.com/vo120"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                    >
-                      gh
-                    </a>
-                  </li>
-                  <li id="fg" className="wow fadeInUp" data-wow-delay="0.8s">
-                    <a
-                      href="https://www.figma.com/@vanessaoru"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                    >
-                      fg
-                    </a>
-                  </li>
-                </ul>
-                <br />
-                <br />
-              </div>
-
-              <div className="col-lg-4" id="address">
-                <p className="wow fadeInUp" data-wow-delay="0s">
-                  get in touch
-                </p>
-                <a href="mailto:redacted@example.com">
-                  <h4 className="wow fadeInUp" data-wow-delay="1.0s">
-                    email me
-                  </h4>
-                </a>
-                <br />
-                <br />
-              </div>
-            </div>
+          <div className="footer__col footer__col--end">
+            <span className="footer__label">Based in</span>
+            <p>Atlanta, GA</p>
+            <p className="footer__muted">Available for 2026</p>
           </div>
         </div>
-        <br />
-        <br />
-        <div className="updated">
-          <div className="container">
-            <p className="wow fadeInUp" data-wow-delay="0.8s">
-              last updated: {document.lastModified} EST
-            </p>
-          </div>
+
+        <div className="footer__bar">
+          <span>© {year} Vanessa Oru</span>
+          <span className="footer__signature">
+            Designed &amp; built with care
+          </span>
+          <button
+            type="button"
+            className="footer__top ul-link"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
+            Back to top ↑
+          </button>
         </div>
-      </footer>
-    </>
+      </div>
+    </footer>
   );
 };
 

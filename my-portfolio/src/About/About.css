@@ -1,19 +1,160 @@
-/*--------------------about page-----------------------*/
-.about {
-  height: 500px;
-  margin-top: 7%;
-  margin-left: -2%;
-  margin-right: 2%;
+/* ============================== ABOUT ============================== */
+.about-page {
+  padding-top: clamp(8rem, 18vh, 13rem);
 }
-.image {
-  background: url("../imgPF/17.jpg") no-repeat 50% 4%;
-  background-size: cover;
+
+.about-hero {
+  padding-bottom: clamp(3rem, 7vw, 5rem);
 }
-.about1 {
-  height: 500px;
-  margin-top: 7%;
+.about-hero__title {
+  font-size: clamp(2.2rem, 6.5vw, 6rem);
+  font-weight: 300;
+  margin-top: 1.5rem;
+  max-width: 18ch;
 }
-.image1 {
-  background: url("../imgPF/18.jpg") no-repeat 50% 7%;
-  background-size: cover;
+.about-hero__title em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+/* portraits */
+.about-portraits {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  align-items: stretch;
+}
+.about-portraits figure {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+}
+.about-portraits__a img {
+  aspect-ratio: 3 / 2;
+}
+.about-portraits__b {
+  align-self: flex-end;
+}
+.about-portraits__b img {
+  aspect-ratio: 4 / 5;
+}
+.about-portraits img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(0.3) brightness(0.95);
+  transition: filter 0.6s var(--ease), transform 1s var(--ease);
+}
+.about-portraits figure:hover img {
+  filter: grayscale(0) brightness(1);
+  transform: scale(1.03);
+}
+
+/* bio */
+.about-bio {
+  display: grid;
+  grid-template-columns: 1fr 2.4fr;
+  gap: clamp(1.5rem, 5vw, 5rem);
+  padding-top: clamp(4rem, 9vw, 8rem);
+  padding-bottom: clamp(4rem, 9vw, 8rem);
+}
+.about-bio__label {
+  align-self: start;
+}
+.about-bio__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  max-width: 60ch;
+}
+.about-bio__lead {
+  font-family: var(--font-display);
+  font-weight: 320;
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--paper);
+}
+.about-bio__body p:not(.about-bio__lead) {
+  color: var(--paper-dim);
+  font-size: clamp(1rem, 1.2vw, 1.12rem);
+  line-height: 1.7;
+}
+.about-bio__body strong {
+  color: var(--paper);
+  font-weight: 500;
+}
+
+/* principles */
+.about-principles {
+  padding-top: clamp(3rem, 7vw, 5rem);
+  padding-bottom: clamp(4rem, 9vw, 8rem);
+  border-top: 1px solid var(--line);
+}
+.about-principles__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+}
+.principle {
+  border-top: 1px solid var(--line);
+  padding-top: 1.4rem;
+}
+.principle__n {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--accent);
+}
+.principle h3 {
+  font-family: var(--font-display);
+  font-weight: 360;
+  font-size: 1.5rem;
+  margin: 1rem 0 0.7rem;
+}
+.principle p {
+  color: var(--paper-dim);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* cta */
+.about-cta {
+  padding-top: clamp(4rem, 9vw, 8rem);
+  padding-bottom: clamp(5rem, 11vw, 9rem);
+  border-top: 1px solid var(--line);
+  text-align: center;
+}
+.about-cta__text {
+  font-size: clamp(2rem, 7vw, 6rem);
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+}
+.about-cta__text em {
+  font-style: italic;
+  color: var(--accent);
+}
+.about-cta__links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 880px) {
+  .about-principles__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .about-portraits {
+    grid-template-columns: 1fr;
+  }
+  .about-bio {
+    grid-template-columns: 1fr;
+  }
+  .about-principles__grid {
+    grid-template-columns: 1fr;
+  }
 }

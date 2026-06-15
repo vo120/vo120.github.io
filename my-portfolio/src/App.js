@@ -22,21 +22,8 @@ import {
   RouterProvider,
   Route,
 } from "react-router-dom";
-import WOW from "wowjs";
 import { useEffect } from "react";
-
-/**
- * Project1: personal portfolio,
- * Project2: Tiktok redesign,
- * Project3: Chess,
- * Project4: NotesApp,
- * Project5: CaseConverter
- * Project6: ChromeRedesign
- * Project7: Blockchain website for web3,
- * Project8: OpenAI Image Generator
- * Project9: BankApp
- * Project10: Blog Site
- * **/
+import { initReveal, initCursor } from "./lib/enhancements";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -68,17 +55,27 @@ const router = createBrowserRouter(
   ),
   { basename: "/" }
 );
+
 function App() {
   useEffect(() => {
-    new WOW.WOW({ live: false }).init();
+    const cleanupReveal = initReveal();
+    const cleanupCursor = initCursor();
+    return () => {
+      cleanupReveal();
+      cleanupCursor();
+    };
   }, []);
+
   return (
-    <>
-      <div className="wrapper">
-        <RouterProvider router={router} />
-        <Footer />
+    <div className="wrapper">
+      <div className="intro-veil" aria-hidden="true">
+        <span>Vanessa Oru</span>
       </div>
-    </>
+      <RouterProvider router={router} />
+      <Footer />
+      <div className="vignette" aria-hidden="true" />
+      <div className="grain" aria-hidden="true" />
+    </div>
   );
 }
 

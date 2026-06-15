@@ -2,72 +2,57 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <!--favicon-->
     <link
       rel="icon"
       href="https://em-content.zobj.net/thumbs/240/apple/325/woman-technologist-medium-skin-tone_1f469-1f3fd-200d-1f4bb.png"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Portfolio Website" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+    <meta name="theme-color" content="#0a0a0a" />
+    <meta name="author" content="Vanessa Oru" />
+    <meta
+      name="description"
+      content="Vanessa Oru — Software Engineer, UX/UI Engineer & Designer working at the intersection of psychology, technology and design. Selected work, experiments and case studies."
+    />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="vanessa" />
 
-    <title>Vanessa Oru - Software Engineer, UX Designer & Researcher</title>
+    <title>Vanessa Oru — Software Engineer, UX Engineer & Designer</title>
 
-    <!----adds favicon icon to browser to stop that error-->
-    <!-- <link rel="shortcut icon" href="#" /> -->
+    <!-- Open Graph / social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Vanessa Oru — Software Engineer & Designer" />
+    <meta
+      property="og:description"
+      content="Software Engineer, UX/UI Engineer & Designer. Selected work at the intersection of psychology, technology and design."
+    />
+    <meta property="og:url" content="https://vanessaoru.me" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Vanessa Oru — Software Engineer & Designer" />
+    <meta
+      name="twitter:description"
+      content="Software Engineer, UX/UI Engineer & Designer. Selected work at the intersection of psychology, technology and design."
+    />
 
-    <!----stylesheet reference--->
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-    <!----part of greensock cdn at bottom but including up here to fix "uncaught error: Boostraps's JS require jQuery.
-    jQuery must be included before Bootstrap--->
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-
-    <!----google fonts----------->
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
 
-    <!--for the on scroll animations-->
+    <!-- Animation keyframes used by legacy project pages -->
     <link rel="stylesheet" href="animate.css" />
-    <!-- <script src="wow.min.js"></script> -->
 
-    <!--bootstrap cdns-->
+    <!-- Bootstrap grid (used by project case-study layouts) -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
+
     <!-- Start Single Page Apps for GitHub Pages -->
     <script type="text/javascript">
-      // Single Page Apps for GitHub Pages
-      // MIT License
-      // https://github.com/rafgraph/spa-github-pages
-      // This script checks to see if a redirect is present in the query string,
-      // converts it back into the correct url and adds it to the
-      // browser's history using window.history.replaceState(...),
-      // which won't cause the browser to attempt to load the new url.
-      // When the single page app is loaded further down in this file,
-      // the correct url will be waiting in the browser's history for
-      // the single page app to route accordingly.
       (function (l) {
         if (l.search[1] === "/") {
           var decoded = l.search
@@ -90,18 +75,8 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-
-    <!-- ionicons cdn -->
+    <!-- ionicons (project navigation arrows) -->
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -110,21 +85,5 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
-    <!-----greensock cdn---->
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>-->
-    <!-- <script src="TweenMax.min.js"></script> -->
-    <!----part of greensock cdn at bottom but including up here to fix "uncaught error: Boostraps's JS require jQuery.
-    jQuery must be included before Bootstrap
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- <script src="main.js"></script> -->
-    <!--part of bootstrap cdns-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
-
-    <!--terminal effect-->
-    <!-- <script src="t.min.js"></script> -->
-
-    <!-- single page app in bundle.js -->
-    <script src="/build/bundle.js"></script>
   </body>
 </html>

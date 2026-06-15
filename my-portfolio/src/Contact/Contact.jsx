@@ -1,109 +1,136 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Contact.css";
 
+const EMAIL = "redacted@example.com";
+
 const Contact = () => {
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
+
+  const update = (e) =>
+    setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const subject = encodeURIComponent(
+      `Hello from ${form.name || "your website"}`
+    );
+    const body = encodeURIComponent(
+      `${form.message}\n\n— ${form.name}${form.email ? ` (${form.email})` : ""}`
+    );
+    window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
+  };
+
   return (
-    <>
-      <div className="whitespace"></div>
+    <div className="contact">
+      <header className="contact__head shell">
+        <p className="eyebrow" data-reveal="fade">
+          Contact
+        </p>
+        <h1 className="display contact__title" data-reveal>
+          Let's say <em>hello.</em> <span className="contact__wave">👋</span>
+        </h1>
+        <p className="contact__intro" data-reveal style={{ "--reveal-delay": "0.1s" }}>
+          Since you've stopped by — why not say hello? Whether it's a role, a
+          project, or just a chat, I'd love to hear from you.
+        </p>
+      </header>
 
-      {/* <!----where hero section starts for saying hello-------> */}
-      <div className="container">
-        <div className="hero-content">
-          <br />
-          <br />
-
-          <div className="row">
-            <div className="col-lg-8">
-              <h3 className="wow fadeInUp" data-wow-delay="1s">
-                say hello 👋.
-              </h3>
-              <br />
-              <p className="wow fadeInUp" data-wow-delay="1.2s">
-                {" "}
-                since you've stopped by, why don't you say hello? <br />
-                I'd love to hear from you. 😊
-              </p>
-              <p
-                className="wow fadeInUp"
-                data-wow-delay="1.2s"
-                style={{ fontWeight: "bold" }}
-              >
-                <br />
-                (Update Jan. 2022): Form is currently under-construction. Kindly
-                use the "email me" link at the bottom of the page if you need to
-                contact me. Thank you for your understanding. 😊
-              </p>
-            </div>
+      <section className="contact__body shell">
+        {/* form */}
+        <form className="contact-form" onSubmit={handleSubmit} data-reveal>
+          <div className="field">
+            <label htmlFor="name">Name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              value={form.name}
+              onChange={update}
+              placeholder="Your name"
+              required
+            />
           </div>
-        </div>
-      </div>
-      {/* <!---------------where hero section ends---------------> */}
-      {/* <!--<div className="whitespace"></div>--> */}
-      {/* <!---------------where form section starts-------------> */}
-      <div className="container-fluid" id="contact">
-        <div className="row">
-          <div className="col-lg-8">
-            <form
-              name="contact-form"
-              id="contact-form"
-              encType="text/plain"
-              method="post"
-              action="mailto:redacted@example.com"
-            >
-              <ul>
-                <li className="wow fadeInUp" data-wow-delay="1.4s">
-                  <label for="contact-name">Name:</label>
-                  <div className="textarea">
-                    <input
-                      type="text"
-                      name="contact-name"
-                      id="contact-name"
-                      value=" "
-                      required
-                    />
-                  </div>
-                </li>
-
-                <li className="wow fadeInUp" data-wow-delay="1.4s">
-                  <label for="contact-email">Email:</label>
-                  <div className="textarea">
-                    <input
-                      type="email"
-                      name="contact-email"
-                      id="contact-email"
-                      value=" "
-                      required
-                    />
-                  </div>
-                </li>
-
-                <li className="wow fadeInUp" data-wow-delay="1.4s">
-                  <label for="contact-project">Message:</label>
-                  <div className="textarea">
-                    <textarea
-                      name="contact-project"
-                      id="contact-project"
-                      rows="7"
-                      required
-                    ></textarea>
-                  </div>
-                </li>
-              </ul>
-
-              <button
-                type="submit"
-                id="contact-submit"
-                className="send wow fadeInUp"
-              >
-                Send Message
-              </button>
-            </form>
+          <div className="field">
+            <label htmlFor="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              value={form.email}
+              onChange={update}
+              placeholder="you@example.com"
+              required
+            />
           </div>
-        </div>
-      </div>
-      {/* <!---------------where form section ends---------------> */}
-      <div className="whitespace"></div>
-    </>
+          <div className="field">
+            <label htmlFor="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              value={form.message}
+              onChange={update}
+              placeholder="Tell me a little about it…"
+              required
+            />
+          </div>
+          <button type="submit" className="btn btn-solid contact-form__submit">
+            Send Message <span className="arrow">↗</span>
+          </button>
+        </form>
+
+        {/* aside */}
+        <aside className="contact__aside" data-reveal style={{ "--reveal-delay": "0.1s" }}>
+          <div className="contact__block">
+            <p className="eyebrow">Email</p>
+            <a href={`mailto:${EMAIL}`} className="contact__email ul-link">
+              {EMAIL}
+            </a>
+          </div>
+          <div className="contact__block">
+            <p className="eyebrow">Elsewhere</p>
+            <ul className="contact__socials">
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/vanessaoru/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="ul-link"
+                >
+                  LinkedIn ↗
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/vo120"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="ul-link"
+                >
+                  GitHub ↗
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.figma.com/@vanessaoru"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="ul-link"
+                >
+                  Figma ↗
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className="contact__block">
+            <p className="eyebrow">Status</p>
+            <p className="contact__status">
+              <i></i> Open to new opportunities in 2026.
+            </p>
+          </div>
+        </aside>
+      </section>
+    </div>
   );
 };
 

@@ -1,146 +1,134 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Navbar.css";
-import { NavLink, Outlet } from "react-router-dom";
-import { gsap, Expo } from "gsap";
-import { useEffect, useRef } from "react";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
+
+const links = [
+  { to: "/", label: "Home", end: true },
+  { to: "/portfolio-projects", label: "Work" },
+  { to: "/resume", label: "Resume" },
+  { to: "/about", label: "About" },
+  { to: "/contact", label: "Contact" },
+];
 
 const Navbar = () => {
-  const [toggleOn, setToggleOn] = useState(false);
-  const [resizeActive, setResizeActive] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
-  function handleToggleClick() {
-    setToggleOn(!toggleOn);
-    setResizeActive(!resizeActive);
-  }
-
-  function handleResizeClick() {
-    setResizeActive(!resizeActive);
-  }
-
-  const brandRef = useRef();
-  const tl = gsap.timeline();
-
+  // Close the mobile menu + jump to top whenever the route changes.
   useEffect(() => {
-    tl.from(brandRef.current, {
-      duration: 0.5,
-      delay: 0.3,
-      y: 10,
-      opacity: 0, // Set the initial opacity to 0
-      ease: Expo.easeInOut,
-    }).to(brandRef.current, {
-      opacity: 1, // Animate the opacity to 1
-    });
-    tl.from("#menu li a", {
-      stagger: 0.1,
-      duration: 0.3,
-      delay: 0.3,
-      opacity: 0, // Set the initial opacity to 0
-      ease: Expo.easeIn,
-    }).to("#menu li a", {
-      opacity: 1, // Animate the opacity to 1
-    });
-  }, [tl]);
+    setMenuOpen(false);
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [location.pathname]);
+
+  // Lock body scroll while the overlay menu is open.
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
+
+  // Hide on scroll-down, reveal on scroll-up; add a backdrop once scrolled.
+  useEffect(() => {
+    let lastY = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      setScrolled(y > 24);
+      if (!menuOpen) setHidden(y > lastY && y > 120);
+      lastY = y;
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [menuOpen]);
 
   return (
     <>
-      <nav>
-        <span id="brand" ref={brandRef}>
-          <NavLink to="/">Vanessa Oru</NavLink>
-        </span>
+      <header
+        className={[
+          "nav",
+          scrolled ? "nav--scrolled" : "",
+          hidden ? "nav--hidden" : "",
+          menuOpen ? "nav--open" : "",
+        ]
+          .join(" ")
+          .trim()}
+      >
+        <NavLink to="/" className="nav__brand">
+          <span className="nav__brand-mark">VO</span>
+          <span className="nav__brand-name">Vanessa Oru</span>
+        </NavLink>
 
-        <ul id="menu">
-          <li>
-            <NavLink to="/">
-              home<span>.</span>
+        <nav className="nav__menu" aria-label="Primary">
+          {links.map((l, i) => (
+            <NavLink
+              key={l.to}
+              to={l.to}
+              end={l.end}
+              className={({ isActive }) =>
+                "nav__link" + (isActive ? " is-active" : "")
+              }
+            >
+              <span className="nav__index">0{i + 1}</span>
+              <span className="nav__label">{l.label}</span>
             </NavLink>
-          </li>
-          <li>
-            <NavLink to="portfolio-projects">
-              portfolio<span>.</span>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="resume">
-              resume<span>.</span>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="about">
-              about me<span>.</span>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="contact">
-              contact me<span>.</span>
-            </NavLink>
-          </li>
-        </ul>
+          ))}
+        </nav>
 
-        <div
-          id="toggle"
-          className={toggleOn ? "on" : ""}
-          onClick={handleToggleClick}
+        <button
+          className={"nav__toggle" + (menuOpen ? " is-open" : "")}
+          onClick={() => setMenuOpen((o) => !o)}
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={menuOpen}
         >
-          <div className="span">menu</div>
-        </div>
-      </nav>
+          <span />
+          <span />
+        </button>
+      </header>
 
-      <div id="resize" className={resizeActive ? "active" : ""}>
-        <div
-          className={resizeActive ? "on close-btn" : "close-btn"}
-          onClick={handleResizeClick}
-        >
-          close
+      {/* Full-screen mobile overlay */}
+      <div className={"nav-overlay" + (menuOpen ? " is-open" : "")}>
+        <nav className="nav-overlay__menu" aria-label="Mobile">
+          {links.map((l, i) => (
+            <NavLink
+              key={l.to}
+              to={l.to}
+              end={l.end}
+              className="nav-overlay__link"
+              style={{ "--i": i }}
+              onClick={() => setMenuOpen(false)}
+            >
+              <span className="nav-overlay__index">0{i + 1}</span>
+              {l.label}
+            </NavLink>
+          ))}
+        </nav>
+        <div className="nav-overlay__foot">
+          <a href="mailto:redacted@example.com" className="ul-link">
+            redacted@example.com
+          </a>
+          <div className="nav-overlay__socials">
+            <a
+              href="https://www.linkedin.com/in/vanessaoru/"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="ul-link"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://github.com/vo120"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="ul-link"
+            >
+              GitHub
+            </a>
+          </div>
         </div>
-
-        <ul id="menu">
-          <li>
-            <NavLink
-              to="/"
-              onClick={handleResizeClick}
-              className={resizeActive ? "on" : ""}
-            >
-              home<span>.</span>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/portfolio-projects"
-              onClick={handleResizeClick}
-              className={resizeActive ? "on" : ""}
-            >
-              portfolio<span>.</span>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/resume"
-              onClick={handleResizeClick}
-              className={resizeActive ? "on" : ""}
-            >
-              resume<span>.</span>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/about"
-              onClick={handleResizeClick}
-              className={resizeActive ? "on" : ""}
-            >
-              about me<span>.</span>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/contact"
-              onClick={handleResizeClick}
-              className={resizeActive ? "on" : ""}
-            >
-              contact me<span>.</span>
-            </NavLink>
-          </li>
-        </ul>
       </div>
+
       <main>
         <Outlet />
       </main>
