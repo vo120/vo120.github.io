@@ -3,13 +3,11 @@ import "./Contact.css";
 
 const EMAIL = "redacted@example.com";
 
-// ⬇️ HOW TO MAKE THIS FORM REAL (free, ~2 minutes):
-// 1. Go to https://formspree.io and sign up with redacted@example.com.
-// 2. Create a new form; it gives you an endpoint like
-//    https://formspree.io/f/abcdwxyz  — copy the ID after "/f/".
-// 3. Paste that ID below. Submissions will then be emailed to you.
-// Until an ID is set, the form falls back to opening the visitor's email app.
-const FORMSPREE_ID = ""; // e.g. "abcdwxyz"
+// Submissions are emailed straight to EMAIL via FormSubmit.co — free, no
+// account, no API key. ONE-TIME SETUP: after this is deployed, send yourself
+// a test message; FormSubmit will email you a confirmation link. Click it once
+// and from then on every submission lands in your inbox.
+const FORMSUBMIT_ENDPOINT = `https://formsubmit.co/ajax/${EMAIL}`;
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -20,23 +18,24 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // Fallback: no backend configured yet → open the visitor's email client.
-    if (!FORMSPREE_ID) {
-      const subject = encodeURIComponent(`Hello from ${form.name || "your site"}`);
-      const body = encodeURIComponent(
-        `${form.message}\n\n— ${form.name}${form.email ? ` (${form.email})` : ""}`
-      );
-      window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
-      return;
-    }
+    if (form._gotcha) return; // honeypot: ignore bots
 
     try {
       setStatus("sending");
-      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+      const res = await fetch(FORMSUBMIT_ENDPOINT, {
         method: "POST",
-        headers: { Accept: "application/json" },
-        body: new FormData(e.target),
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          message: form.message,
+          _subject: `New message from ${form.name} — vanessaoru.codes`,
+          _template: "table",
+          _captcha: "false",
+        }),
       });
       if (res.ok) {
         setStatus("success");
@@ -67,6 +66,17 @@ const Contact = () => {
       <section className="contact__body shell">
         {/* form */}
         <form className="contact-form" onSubmit={handleSubmit} data-reveal>
+          {/* honeypot — hidden from people, catches bots */}
+          <input
+            type="text"
+            name="_gotcha"
+            tabIndex="-1"
+            autoComplete="off"
+            value={form._gotcha || ""}
+            onChange={update}
+            style={{ display: "none" }}
+            aria-hidden="true"
+          />
           <div className="field">
             <label htmlFor="name">Name</label>
             <input
