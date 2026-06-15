@@ -3,21 +3,50 @@ import "./Contact.css";
 
 const EMAIL = "redacted@example.com";
 
+// ⬇️ HOW TO MAKE THIS FORM REAL (free, ~2 minutes):
+// 1. Go to https://formspree.io and sign up with redacted@example.com.
+// 2. Create a new form; it gives you an endpoint like
+//    https://formspree.io/f/abcdwxyz  — copy the ID after "/f/".
+// 3. Paste that ID below. Submissions will then be emailed to you.
+// Until an ID is set, the form falls back to opening the visitor's email app.
+const FORMSPREE_ID = ""; // e.g. "abcdwxyz"
+
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [status, setStatus] = useState("idle"); // idle | sending | success | error
 
   const update = (e) =>
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const subject = encodeURIComponent(
-      `Hello from ${form.name || "your website"}`
-    );
-    const body = encodeURIComponent(
-      `${form.message}\n\n— ${form.name}${form.email ? ` (${form.email})` : ""}`
-    );
-    window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
+
+    // Fallback: no backend configured yet → open the visitor's email client.
+    if (!FORMSPREE_ID) {
+      const subject = encodeURIComponent(`Hello from ${form.name || "your site"}`);
+      const body = encodeURIComponent(
+        `${form.message}\n\n— ${form.name}${form.email ? ` (${form.email})` : ""}`
+      );
+      window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
+      return;
+    }
+
+    try {
+      setStatus("sending");
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: new FormData(e.target),
+      });
+      if (res.ok) {
+        setStatus("success");
+        setForm({ name: "", email: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -74,9 +103,30 @@ const Contact = () => {
               required
             />
           </div>
-          <button type="submit" className="btn btn-solid contact-form__submit">
-            Send Message <span className="arrow">↗</span>
+
+          <button
+            type="submit"
+            className="btn btn-solid contact-form__submit"
+            disabled={status === "sending"}
+          >
+            {status === "sending" ? "Sending…" : "Send Message"}{" "}
+            <span className="arrow">↗</span>
           </button>
+
+          {status === "success" && (
+            <p className="contact-form__note contact-form__note--ok">
+              Thanks — your message is on its way. I'll be in touch soon. ✨
+            </p>
+          )}
+          {status === "error" && (
+            <p className="contact-form__note contact-form__note--err">
+              Something went wrong. Please email me directly at{" "}
+              <a href={`mailto:${EMAIL}`} className="ul-link">
+                {EMAIL}
+              </a>
+              .
+            </p>
+          )}
         </form>
 
         {/* aside */}
