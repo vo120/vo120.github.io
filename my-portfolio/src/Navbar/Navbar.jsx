@@ -105,9 +105,13 @@ const Navbar = () => {
           ))}
         </nav>
         <div className="nav-overlay__foot">
-          <a href="mailto:redacted@example.com" className="ul-link">
-            redacted@example.com
-          </a>
+          <NavLink
+            to="/contact"
+            className="ul-link"
+            onClick={() => setMenuOpen(false)}
+          >
+            Get in touch
+          </NavLink>
           <div className="nav-overlay__socials">
             <a
               href="https://www.linkedin.com/in/vanessaoru/"

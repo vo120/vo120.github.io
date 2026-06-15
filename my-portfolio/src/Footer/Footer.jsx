@@ -27,9 +27,9 @@ const Footer = () => {
             >
               LinkedIn ↗
             </a>
-            <a href="mailto:redacted@example.com" className="ul-link">
+            <Link to="/contact" className="ul-link">
               Email me ↗
-            </a>
+            </Link>
           </div>
 
           <div className="footer__col">

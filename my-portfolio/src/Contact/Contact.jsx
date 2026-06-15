@@ -1,13 +1,21 @@
 import React, { useState } from "react";
 import "./Contact.css";
 
-const EMAIL = "redacted@example.com";
-
-// Submissions are emailed straight to EMAIL via FormSubmit.co — free, no
-// account, no API key. ONE-TIME SETUP: after this is deployed, send yourself
-// a test message; FormSubmit will email you a confirmation link. Click it once
-// and from then on every submission lands in your inbox.
-const FORMSUBMIT_ENDPOINT = `https://formsubmit.co/ajax/${EMAIL}`;
+// Contact form delivery — your email address is intentionally NOT in this code.
+// We use FormSubmit's hashed endpoint so nothing is exposed publicly.
+//
+// SETUP (one time, free, no account):
+//   1. Visit https://formsubmit.co and enter the email you want messages sent
+//      to (use any address you like — it never appears on the site).
+//   2. They email you a confirmation link → click it.
+//      That email also contains your unique endpoint, e.g.
+//      https://formsubmit.co/ajax/9f8c1a2b3c...   ← copy the part after /ajax/
+//   3. Paste that random string below. Done — messages go to your inbox,
+//      and your email stays private.
+const FORMSUBMIT_TOKEN = ""; // e.g. "9f8c1a2b3c4d5e6f"
+const FORMSUBMIT_ENDPOINT = FORMSUBMIT_TOKEN
+  ? `https://formsubmit.co/ajax/${FORMSUBMIT_TOKEN}`
+  : "";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -19,6 +27,10 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (form._gotcha) return; // honeypot: ignore bots
+    if (!FORMSUBMIT_ENDPOINT) {
+      setStatus("error");
+      return;
+    }
 
     try {
       setStatus("sending");
@@ -130,11 +142,8 @@ const Contact = () => {
           )}
           {status === "error" && (
             <p className="contact-form__note contact-form__note--err">
-              Something went wrong. Please email me directly at{" "}
-              <a href={`mailto:${EMAIL}`} className="ul-link">
-                {EMAIL}
-              </a>
-              .
+              Something went wrong — please try again in a moment, or reach me
+              via the links here.
             </p>
           )}
         </form>
@@ -142,10 +151,11 @@ const Contact = () => {
         {/* aside */}
         <aside className="contact__aside" data-reveal style={{ "--reveal-delay": "0.1s" }}>
           <div className="contact__block">
-            <p className="eyebrow">Email</p>
-            <a href={`mailto:${EMAIL}`} className="contact__email ul-link">
-              {EMAIL}
-            </a>
+            <p className="eyebrow">Reach me</p>
+            <p className="contact__email">
+              Drop a note in the form — it comes straight to me, no inbox
+              hunting required.
+            </p>
           </div>
           <div className="contact__block">
             <p className="eyebrow">Elsewhere</p>
