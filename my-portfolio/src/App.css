@@ -13,8 +13,8 @@
   --paper-faint: #6f6c66;
   --line: rgba(236, 232, 225, 0.14);
   --line-strong: rgba(236, 232, 225, 0.28);
-  --accent: #e8a33c;
-  --accent-deep: #c8821c;
+  --accent: #66d4d0;
+  --accent-deep: #3fb8b2;
 
   /* type */
   --font-display: "Fraunces", Georgia, "Times New Roman", serif;
@@ -152,7 +152,7 @@ p {
 body.cursor-hover .cursor-ring {
   width: 64px;
   height: 64px;
-  background: rgba(232, 163, 60, 0.1);
+  background: rgba(102, 212, 208, 0.1);
   border-color: var(--accent);
 }
 @media (hover: none), (pointer: coarse) {
