@@ -103,10 +103,15 @@
 .nav__link.is-active .nav__index {
   color: var(--accent);
 }
-.nav__link:hover .nav__label::after,
 .nav__link.is-active .nav__label::after {
   transform: scaleX(1);
   transform-origin: left;
+}
+@media (hover: hover) {
+  .nav__link:hover .nav__label::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
 }
 
 /* ---------- burger toggle ---------- */

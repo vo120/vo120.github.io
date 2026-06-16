@@ -13,8 +13,8 @@
   --paper-faint: #6f6c66;
   --line: rgba(236, 232, 225, 0.14);
   --line-strong: rgba(236, 232, 225, 0.28);
-  --accent: #c8f24e;
-  --accent-deep: #aee022;
+  --accent: #e8a33c;
+  --accent-deep: #c8821c;
 
   /* type */
   --font-display: "Fraunces", Georgia, "Times New Roman", serif;
@@ -34,6 +34,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html,
@@ -151,7 +152,7 @@ p {
 body.cursor-hover .cursor-ring {
   width: 64px;
   height: 64px;
-  background: rgba(200, 242, 78, 0.1);
+  background: rgba(232, 163, 60, 0.1);
   border-color: var(--accent);
 }
 @media (hover: none), (pointer: coarse) {
@@ -296,9 +297,12 @@ main > .whitespace:first-child {
   transform-origin: right;
   transition: transform 0.45s var(--ease);
 }
-.ul-link:hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
+/* underline animates for mouse users only — avoids sticky underline on tap */
+@media (hover: hover) {
+  .ul-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
 }
 
 /* ---------- marquee ---------- */

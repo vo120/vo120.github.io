@@ -151,13 +151,6 @@ const Contact = () => {
         {/* aside */}
         <aside className="contact__aside" data-reveal style={{ "--reveal-delay": "0.1s" }}>
           <div className="contact__block">
-            <p className="eyebrow">Reach me</p>
-            <p className="contact__email">
-              Drop a note in the form — it comes straight to me, no inbox
-              hunting required.
-            </p>
-          </div>
-          <div className="contact__block">
             <p className="eyebrow">Elsewhere</p>
             <ul className="contact__socials">
               <li>
