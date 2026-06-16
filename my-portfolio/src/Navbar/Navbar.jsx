@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 import { NavLink, Outlet, useLocation } from "react-router-dom";
+import Footer from "../Footer/Footer.jsx";
 
 const links = [
   { to: "/", label: "Home", end: true },
@@ -136,6 +137,7 @@ const Navbar = () => {
       <main>
         <Outlet />
       </main>
+      <Footer />
     </>
   );
 };

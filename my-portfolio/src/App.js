@@ -1,6 +1,5 @@
 import "./App.css";
 import Navbar from "./Navbar/Navbar.jsx";
-import Footer from "./Footer/Footer.jsx";
 import Home from "./Home/Home.jsx";
 import About from "./About/About.jsx";
 import Contact from "./Contact/Contact.jsx";
@@ -72,7 +71,6 @@ function App() {
         <span>Vanessa Oru</span>
       </div>
       <RouterProvider router={router} />
-      <Footer />
       <div className="vignette" aria-hidden="true" />
       <div className="grain" aria-hidden="true" />
     </div>
